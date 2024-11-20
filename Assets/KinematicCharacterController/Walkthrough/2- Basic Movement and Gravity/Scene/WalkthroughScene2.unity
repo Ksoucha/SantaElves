@@ -12790,6 +12790,7 @@ MonoBehaviour:
   RotationObstruction: 0
   Gravity: {x: 0, y: -30, z: 0}
   MeshRoot: {fileID: 301500497}
+  InteractionDistance: 2
 --- !u!43 &1240974627
 Mesh:
   m_ObjectHideFlags: 0
