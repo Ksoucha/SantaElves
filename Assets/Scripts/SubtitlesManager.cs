@@ -6,20 +6,28 @@ using UnityEngine.UI;
 
 public class SubtitlesManager : MonoBehaviour
 {
-    public Image subtitleBackground;
+    public Image subtitleBackgroundImage;
     public TMP_Text subtitleText;
+    public TMP_Text gameControlsText;
     private float subtitleTimer;
+    private float gameControlsTextTimer = 15f;
 
-    internal void ShowText(string text, float duration)
+    internal void ShowSubtitleText(string text, float duration)
     {
         subtitleText.text = text;
-        subtitleBackground.enabled = true;
+        subtitleBackgroundImage.enabled = true;
         subtitleTimer = duration;
     }
 
-    internal void ShowText(string text)
+    internal void ShowGameControlsText(string text, float duration)
     {
-        ShowText(text, text.Length * 0.15f);
+        gameControlsText.text = text;
+        gameControlsTextTimer = duration;
+    }
+
+    internal void ShowSubtitleText(string text)
+    {
+        ShowSubtitleText(text, text.Length * 0.15f);
     }
 
     private void Start()
@@ -29,7 +37,7 @@ public class SubtitlesManager : MonoBehaviour
 
     private void ClearSubtitle()
     {
-        subtitleBackground.enabled = false;
+        subtitleBackgroundImage.enabled = false;
         subtitleText.text = "";
     }
 
