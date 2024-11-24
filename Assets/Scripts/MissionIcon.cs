@@ -18,4 +18,16 @@ public class MissionIcon : MonoBehaviour
     {
         
     }
+
+    internal void ShowGreenMissionIcon()
+    {
+        greenHat.enabled = true;
+        redHat.enabled = false;
+    }
+
+    internal void ShowRedMissionIcon()
+    {
+        redHat.enabled = true;
+        greenHat.enabled = false;
+    }
 }

@@ -22,4 +22,24 @@ public class ObjectIcon : MonoBehaviour
     {
         
     }
+
+    internal void ShowCandyIcon()
+    {
+        candy.enabled = true;
+    }
+
+    internal void ShowToyIcon()
+    {
+        toy.enabled = false;
+    }
+
+    internal void ShowBatteryIcon()
+    {
+        battery.enabled = true;
+    }
+
+    internal void ShowScrewdriverIcon()
+    {
+        screwdriver.enabled = false;
+    }
 }
