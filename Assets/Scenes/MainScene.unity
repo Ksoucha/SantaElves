@@ -3274,7 +3274,7 @@ MonoBehaviour:
   LastInstanceID: 32668
   Filter: {fileID: 275613225}
   Renderer: {fileID: 275613224}
-  IsValidated: 0
+  IsValidated: 1
   _curvePresetPrev: {fileID: 11400000, guid: 0ab8481dd7ec91443a890a76f7744bff, type: 2}
 --- !u!4 &275613227
 Transform:
@@ -10705,7 +10705,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 435008, guid: 10a9cb4554200574dbe94e4026ff0b59, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -26.107738
+      value: -30.09
       objectReference: {fileID: 0}
     - target: {fileID: 435008, guid: 10a9cb4554200574dbe94e4026ff0b59, type: 3}
       propertyPath: m_LocalPosition.z
@@ -18614,7 +18614,7 @@ Transform:
   m_GameObject: {fileID: 1329683151}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.135, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -19033,7 +19033,7 @@ Transform:
   m_GameObject: {fileID: 1354290987}
   serializedVersion: 2
   m_LocalRotation: {x: 0.78302854, y: -0.4142372, z: 0.42985743, w: 0.17463234}
-  m_LocalPosition: {x: -5.216262, y: 33.79, z: -21.6628}
+  m_LocalPosition: {x: -5.216262, y: 55.65, z: -21.6628}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
