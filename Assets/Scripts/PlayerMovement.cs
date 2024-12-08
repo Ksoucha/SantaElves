@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-
     [Header("Movement")]
     public float moveSpeed;
 
@@ -37,13 +36,11 @@ public class PlayerMovement : MonoBehaviour
         rb.freezeRotation = true;
 
         readyToJump = true;
-        
     }
 
 
     void Update()
     {
-
         // ground check
         grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 5f + 5f, whatIsGround);
 
@@ -120,6 +117,5 @@ public class PlayerMovement : MonoBehaviour
     {
         readyToJump = true;
     }
-
 }
 

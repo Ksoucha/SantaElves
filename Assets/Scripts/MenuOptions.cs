@@ -1,18 +1,37 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
+using UnityEngine.UI;
 
 public class MenuOptions : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public AudioMixerGroup masterVolumeGroup;
+    public Slider volumeSlider;
+
+    public Slider mouseSlider;
+
+    public GameObject optionsMenu;
+    public GameObject pauseMenu;
+    public GameObject mainMenu;
+
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         
+    }
+
+    public void OnMasterVolumeChanged()
+    {
+        masterVolumeGroup.audioMixer.SetFloat("Volume", volumeSlider.value);
+    }
+
+    public void OnBackButtonClicked()
+    {
+
     }
 }
