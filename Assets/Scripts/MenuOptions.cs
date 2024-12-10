@@ -8,7 +8,6 @@ public class MenuOptions : MonoBehaviour
 {
     public AudioMixerGroup masterVolumeGroup;
     public Slider volumeSlider;
-
     public Slider mouseSlider;
 
     public GameObject optionsMenu;
@@ -33,5 +32,10 @@ public class MenuOptions : MonoBehaviour
     public void OnBackButtonClicked()
     {
 
+    }
+
+    public void OnMouseSensitivityChanged()
+    {
+        PlayerSettings.instance.mouseSensitivity = mouseSlider.value;
     }
 }

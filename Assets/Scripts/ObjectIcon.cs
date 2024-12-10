@@ -3,19 +3,26 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+public enum ItemType
+{
+    Candy,
+    Toy,
+    Battery,
+    Screwdriver
+}
+
 public class ObjectIcon : MonoBehaviour
 {
-    public Image candy;
-    public Image toy;
-    public Image battery;
-    public Image screwdriver;
+    //public Image candy;
+    //public Image toy;
+    //public Image battery;
+    //public Image screwdriver;
+    public Dictionary<ItemType, Image> itemsImage;
+
 
     void Start()
     {
-        candy = GetComponent<Image>();
-        toy = GetComponent<Image>();
-        battery = GetComponent<Image>();
-        screwdriver = GetComponent<Image>();
+
     }
 
     void Update()
@@ -23,23 +30,8 @@ public class ObjectIcon : MonoBehaviour
         
     }
 
-    internal void ShowCandyIcon()
+    public void ShowItemIcon(ItemType itemType)
     {
-        candy.enabled = true;
-    }
-
-    internal void ShowToyIcon()
-    {
-        toy.enabled = false;
-    }
-
-    internal void ShowBatteryIcon()
-    {
-        battery.enabled = true;
-    }
-
-    internal void ShowScrewdriverIcon()
-    {
-        screwdriver.enabled = false;
+        itemsImage[itemType].gameObject.SetActive(true);
     }
 }

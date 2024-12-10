@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayerCam : MonoBehaviour
 {
-    public float sensX;
-    public float sensY;
+    private float sensX;
+    private float sensY;
 
     public Transform orientation;
 
@@ -20,6 +20,12 @@ public class PlayerCam : MonoBehaviour
 
     void Update()
     {
+        if (PlayerSettings.instance != null)
+        {
+            sensX = PlayerSettings.instance.mouseSensitivity;
+            sensY = PlayerSettings.instance.mouseSensitivity;
+        }
+
         // get mouse input
         float mouseX = Input.GetAxisRaw("Mouse X") * Time.deltaTime * sensX;
         float mouseY = Input.GetAxisRaw("Mouse Y") * Time.deltaTime * sensY;
