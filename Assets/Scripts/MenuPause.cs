@@ -19,9 +19,9 @@ public class MenuPause : MonoBehaviour
         {
             if (pauseMenu.activeInHierarchy)
             {
+                isPaused = false;
                 pauseMenu.SetActive(false);
                 Time.timeScale = 1;
-                isPaused = false;
                 Cursor.lockState = CursorLockMode.Locked;
             }
             else

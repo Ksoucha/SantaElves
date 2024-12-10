@@ -10,7 +10,7 @@ public class SubtitlesManager : MonoBehaviour
     public TMP_Text subtitleText;
     public TMP_Text gameControlsText;
     private float subtitleTimer;
-    private float gameControlsTextTimer = 15f;
+    //private float gameControlsTextTimer = 15f;
 
     internal void ShowSubtitleText(string text, float duration)
     {
@@ -19,11 +19,11 @@ public class SubtitlesManager : MonoBehaviour
         subtitleTimer = duration;
     }
 
-    internal void ShowGameControlsText(string text, float duration)
-    {
-        gameControlsText.text = text;
-        gameControlsTextTimer = duration;
-    }
+    //internal void ShowGameControlsText(string text, float duration)
+    //{
+    //    gameControlsText.text = text;
+    //    gameControlsTextTimer = duration;
+    //}
 
     internal void ShowSubtitleText(string text)
     {

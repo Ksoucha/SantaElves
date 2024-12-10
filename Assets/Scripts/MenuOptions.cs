@@ -12,7 +12,7 @@ public class MenuOptions : MonoBehaviour
 
     public GameObject optionsMenu;
     public GameObject pauseMenu;
-    public GameObject mainMenu;
+    //public GameObject mainMenu;
 
     void Start()
     {
@@ -31,7 +31,15 @@ public class MenuOptions : MonoBehaviour
 
     public void OnBackButtonClicked()
     {
-
+        if (pauseMenu.activeInHierarchy)
+        {
+            optionsMenu.SetActive(false);
+            pauseMenu.SetActive(true);
+        }
+        else
+        {
+            optionsMenu.SetActive(true);
+        }
     }
 
     public void OnMouseSensitivityChanged()
