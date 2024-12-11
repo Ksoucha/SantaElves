@@ -38,7 +38,7 @@ public class MenuOptions : MonoBehaviour
         }
         else
         {
-            optionsMenu.SetActive(true);
+            optionsMenu.SetActive(false);
         }
     }
 

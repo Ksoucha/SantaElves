@@ -7,6 +7,8 @@ public class MissionIcon : MonoBehaviour
 {
     public Image redHat;
     public Image greenHat;
+    public AudioSource redHatPop;
+    public AudioSource greenHatPop;
 
     void Start()
     {
@@ -23,11 +25,13 @@ public class MissionIcon : MonoBehaviour
     {
         greenHat.enabled = true;
         redHat.enabled = false;
+        greenHatPop.Play();
     }
 
     internal void ShowRedMissionIcon()
     {
         redHat.enabled = true;
         greenHat.enabled = false;
+        redHatPop.Play();
     }
 }

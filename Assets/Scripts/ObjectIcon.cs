@@ -18,6 +18,7 @@ public class ObjectIcon : MonoBehaviour
     //public Image battery;
     //public Image screwdriver;
     public Dictionary<ItemType, Image> itemsImage;
+    public AudioSource itemPop;
 
 
     void Start()
@@ -33,5 +34,12 @@ public class ObjectIcon : MonoBehaviour
     public void ShowItemIcon(ItemType itemType)
     {
         itemsImage[itemType].gameObject.SetActive(true);
+        itemPop.Play();
+    }
+
+    public void RemoveItemIcon(ItemType itemType)
+    {
+        itemsImage[itemType].gameObject.SetActive(false);
+        itemPop.Play();
     }
 }

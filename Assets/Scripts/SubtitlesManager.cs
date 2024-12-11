@@ -7,10 +7,13 @@ using UnityEngine.UI;
 public class SubtitlesManager : MonoBehaviour
 {
     public Image subtitleBackgroundImage;
+    public Image gameControlsBackgroundImage;
+
     public TMP_Text subtitleText;
     public TMP_Text gameControlsText;
+
     private float subtitleTimer;
-    //private float gameControlsTextTimer = 15f;
+    private float gameControlsTextTimer = 15f;
 
     internal void ShowSubtitleText(string text, float duration)
     {
@@ -19,11 +22,12 @@ public class SubtitlesManager : MonoBehaviour
         subtitleTimer = duration;
     }
 
-    //internal void ShowGameControlsText(string text, float duration)
-    //{
-    //    gameControlsText.text = text;
-    //    gameControlsTextTimer = duration;
-    //}
+    internal void ShowGameControlsText(string text, float duration)
+    {
+        gameControlsText.text = text;
+        gameControlsBackgroundImage.enabled = true;
+        gameControlsTextTimer = duration;
+    }
 
     internal void ShowSubtitleText(string text)
     {
@@ -32,7 +36,13 @@ public class SubtitlesManager : MonoBehaviour
 
     private void Start()
     {
-        ClearSubtitle();
+        //ClearSubtitle();
+        ShowGameControlsText(gameControlsText.text, 15f);
+    }
+
+    private void ClearGameControlsText()
+    {
+        gameControlsBackgroundImage.enabled = false;
     }
 
     private void ClearSubtitle()
@@ -48,7 +58,16 @@ public class SubtitlesManager : MonoBehaviour
             subtitleTimer -= Time.deltaTime;
             if (subtitleTimer <= 0)
             {
-                ClearSubtitle();
+                //ClearSubtitle();
+            }
+        }
+
+        if (gameControlsTextTimer > 0)
+        {
+            subtitleTimer -= Time.deltaTime;
+            if (subtitleTimer <= 0)
+            {
+                ClearGameControlsText();
             }
         }
     }
