@@ -9,8 +9,9 @@ public class DialogueUI : MonoBehaviour
    
     private void Start()
     {
-        textLabel.text = "Test\nThis is a test.";
-        
+        GetComponent<TypewriterEffect>().Run("Test\nThis is a test.", textLabel);
+
+
     }
 
 
