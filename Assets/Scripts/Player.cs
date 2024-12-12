@@ -30,6 +30,7 @@ public class Player : MonoBehaviour
     Vector3 moveDirection;
 
     Rigidbody rb;
+
     public AudioSource footstepSound;
     private float footstepTimer = 0f;
     private float cooldownFootsteps = 0.8f;
@@ -49,7 +50,6 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-
         if (dialogueUI.isOpen) return;
 
         // ground check
@@ -69,17 +69,13 @@ public class Player : MonoBehaviour
         }
 
         // dialogue
-
         if (Input.GetKeyDown(KeyCode.E))
         {
             if (interactable != null)
             {
                 interactable.Interact(this);
             }
-
         }
-
-
     }
 
     private void FixedUpdate()
