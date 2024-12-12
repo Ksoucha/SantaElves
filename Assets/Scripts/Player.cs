@@ -40,7 +40,7 @@ public class Player : MonoBehaviour
     public DialogueUI DialogueUI => dialogueUI;
     public IInteractable interactable { get; set; }
 
-    void Start()
+    private void Start()
     {
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
@@ -48,12 +48,12 @@ public class Player : MonoBehaviour
         readyToJump = true;
     }
 
-    void Update()
+    private void Update()
     {
         if (dialogueUI.isOpen) return;
 
         // ground check
-        grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 5f + 5f, whatIsGround);
+        grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 3.5f + 3.5f, whatIsGround);
 
         MyInput();
         SpeedControl();
@@ -109,12 +109,14 @@ public class Player : MonoBehaviour
             {
                 rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
 
+                
                 footstepTimer -= Time.deltaTime;
                 if (footstepTimer <= 0f)
                 {
                     footstepSound.Play();
                     footstepTimer = cooldownFootsteps;
                 }
+                
             }
         }
         else if (!grounded)
