@@ -8,7 +8,6 @@ public class TransitionScene : MonoBehaviour
     [SerializeField] Animator fadeToBlackAnimator;
     private bool isFadeAnimationOver = false;
 
-
     void Start()
     {
         
@@ -16,7 +15,7 @@ public class TransitionScene : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.J))
+        if (Input.GetKeyDown(KeyCode.Return))
         {
             fadeToBlackAnimator.SetTrigger("FadeTrigger");
             isFadeAnimationOver = true;
@@ -24,7 +23,13 @@ public class TransitionScene : MonoBehaviour
 
         if (isFadeAnimationOver)
         {
-            SceneManager.LoadScene("MainScene");
+            StartCoroutine(LoadMainScene());
         }
+    }
+
+    IEnumerator LoadMainScene()
+    {
+        yield return new WaitForSeconds(5);
+        SceneManager.LoadScene("MainScene");
     }
 }
