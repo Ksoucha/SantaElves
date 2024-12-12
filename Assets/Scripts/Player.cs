@@ -49,6 +49,9 @@ public class Player : MonoBehaviour
 
     void Update()
     {
+
+        if (dialogueUI.isOpen) return;
+
         // ground check
         grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 5f + 5f, whatIsGround);
 
