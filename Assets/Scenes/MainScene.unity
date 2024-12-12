@@ -16119,8 +16119,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be30df79d14cb3a458c346c568b10f4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensX: 300
-  sensY: 300
+  sensX: 200
+  sensY: 200
   orientation: {fileID: 1987342433}
 --- !u!114 &717493961
 MonoBehaviour:
@@ -37951,7 +37951,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2086306444
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38047,9 +38047,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44d357be792659e4ebc0208482752c93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueBox: {fileID: 0}
+  dialogueBox: {fileID: 1537331039}
   textLabel: {fileID: 1563924241}
-  testDialogue: {fileID: 0}
+  testDialogue: {fileID: 11400000, guid: 537ca4ec7589d3743b09126ead21c714, type: 2}
 --- !u!114 &2086306449
 MonoBehaviour:
   m_ObjectHideFlags: 0

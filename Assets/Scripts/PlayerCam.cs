@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayerCam : MonoBehaviour
 {
-    public float sensX;
-    public float sensY;
+    public float sensX = 200;
+    public float sensY = 200;
 
     public Transform orientation;
 
@@ -22,8 +22,8 @@ public class PlayerCam : MonoBehaviour
     {
         if (PlayerSettings.instance != null)
         {
-            sensX = PlayerSettings.instance.mouseSensitivity;
-            sensY = PlayerSettings.instance.mouseSensitivity;
+            // sensX = PlayerSettings.instance.mouseSensitivity;
+            //sensY = PlayerSettings.instance.mouseSensitivity;
         }
 
         // get mouse input
