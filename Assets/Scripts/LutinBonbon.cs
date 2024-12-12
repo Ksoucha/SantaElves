@@ -2,15 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LutinBonbon : MonoBehaviour
+public class LutinBonbon : MonoBehaviour, IInteractable
 {
-    // Start is called before the first frame update
-    void Start()
+    public Animator animator;
+    private PlayerMovement player;
+
+    public void Interact()
     {
-        
+        Vector3 direction = player.transform.position - transform.position;
+        direction.Normalize();
+        transform.forward = direction;
     }
 
-    // Update is called once per frame
+    void Start()
+    {
+        player = FindAnyObjectByType<PlayerMovement>();
+    }
+
     void Update()
     {
         

@@ -30,6 +30,9 @@ public class PlayerMovement : MonoBehaviour
     Vector3 moveDirection;
 
     Rigidbody rb;
+    public AudioSource footstepSound;
+    private float footstepTimer = 0f;
+    private float cooldownFootsteps = 0.8f;
 
     void Start()
     {
@@ -86,6 +89,13 @@ public class PlayerMovement : MonoBehaviour
         if (grounded)
         {
             rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
+
+            footstepTimer -= Time.deltaTime;
+            if (footstepTimer <= 0f)
+            {
+                footstepSound.Play();
+                footstepTimer = cooldownFootsteps;
+            }
         }
         else if (!grounded)
         {

@@ -19,10 +19,7 @@ public class MenuPause : MonoBehaviour
         {
             if (pauseMenu.activeInHierarchy)
             {
-                isPaused = false;
-                pauseMenu.SetActive(false);
-                Time.timeScale = 1;
-                Cursor.lockState = CursorLockMode.Locked;
+                OnContinueClicked();
             }
             else
             {
@@ -32,5 +29,18 @@ public class MenuPause : MonoBehaviour
                 Cursor.lockState = CursorLockMode.Confined;
             }
         }
+    }
+
+    public void OnContinueClicked()
+    {
+        isPaused = false;
+        pauseMenu.SetActive(false);
+        Time.timeScale = 1;
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+
+    public void OnQuitClicked()
+    {
+        Application.Quit();
     }
 }
