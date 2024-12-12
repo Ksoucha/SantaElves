@@ -12,7 +12,6 @@ public class MenuOptions : MonoBehaviour
 
     public GameObject optionsMenu;
     public GameObject pauseMenu;
-    //public GameObject mainMenu;
 
     void Start()
     {
@@ -31,10 +30,17 @@ public class MenuOptions : MonoBehaviour
 
     public void OnBackButtonClicked()
     {
-        if (pauseMenu.activeInHierarchy)
+        if (pauseMenu)
         {
-            optionsMenu.SetActive(false);
-            pauseMenu.SetActive(true);
+            if (pauseMenu.activeInHierarchy)
+            {
+                optionsMenu.SetActive(false);
+                pauseMenu.SetActive(true);
+            }
+            else
+            {
+                optionsMenu.SetActive(false);
+            }
         }
         else
         {
@@ -44,6 +50,10 @@ public class MenuOptions : MonoBehaviour
 
     public void OnMouseSensitivityChanged()
     {
-        PlayerSettings.instance.mouseSensitivity = mouseSlider.value;
+        if (PlayerSettings.instance)
+        {
+            Debug.Log("sensitivity");
+            PlayerSettings.instance.mouseSensitivity = mouseSlider.value;
+        }
     }
 }

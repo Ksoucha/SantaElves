@@ -5,6 +5,7 @@ using UnityEngine;
 public class MenuPause : MonoBehaviour
 {
     public GameObject pauseMenu;
+    public GameObject optionsMenu;
 
     public static bool isPaused { get; private set; }
 
@@ -41,6 +42,18 @@ public class MenuPause : MonoBehaviour
 
     public void OnQuitClicked()
     {
-        Application.Quit();
+        if (Application.isEditor)
+        {
+            UnityEditor.EditorApplication.isPlaying = false;
+        }
+        else
+        {
+            Application.Quit();
+        }
+    }
+
+    public void OnOptionsClicked()
+    {
+        optionsMenu.SetActive(true);
     }
 }

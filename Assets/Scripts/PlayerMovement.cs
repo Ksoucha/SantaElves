@@ -88,13 +88,16 @@ public class PlayerMovement : MonoBehaviour
 
         if (grounded)
         {
-            rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
-
-            footstepTimer -= Time.deltaTime;
-            if (footstepTimer <= 0f)
+            if (verticalInput > 0 || horizontalInput > 0)
             {
-                footstepSound.Play();
-                footstepTimer = cooldownFootsteps;
+                rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
+
+                footstepTimer -= Time.deltaTime;
+                if (footstepTimer <= 0f)
+                {
+                    footstepSound.Play();
+                    footstepTimer = cooldownFootsteps;
+                }
             }
         }
         else if (!grounded)
