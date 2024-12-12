@@ -369,7 +369,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 2.4405384e-30, y: 2.2e-44, z: -2.4405384e-30, w: 4.5e-44}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -7549,7 +7549,7 @@ ParticleSystem:
       emitProbability: 1
   LightsModule:
     enabled: 1
-    ratio: 0
+    ratio: 1
     light: {fileID: 59702803}
     randomDistribution: 1
     color: 1
@@ -7558,7 +7558,7 @@ ParticleSystem:
     rangeCurve:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 15
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -7611,7 +7611,7 @@ ParticleSystem:
     intensityCurve:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 15
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -15777,7 +15777,7 @@ MonoBehaviour:
   priority: 0
   blendDistance: 0
   weight: 1
-  sharedProfile: {fileID: 0}
+  sharedProfile: {fileID: 11400000, guid: 7594e8de88a4bed4496c90359005c15f, type: 2}
 --- !u!4 &704723347
 Transform:
   m_ObjectHideFlags: 0
@@ -15787,7 +15787,7 @@ Transform:
   m_GameObject: {fileID: 704723345}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.304034, y: 27.157774, z: -11.36}
+  m_LocalPosition: {x: -9.21, y: 16.58, z: -11.36}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -37595,7 +37595,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44d357be792659e4ebc0208482752c93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogueBox: {fileID: 0}
   textLabel: {fileID: 1563924241}
+  testDialogue: {fileID: 0}
 --- !u!114 &2086306449
 MonoBehaviour:
   m_ObjectHideFlags: 0
