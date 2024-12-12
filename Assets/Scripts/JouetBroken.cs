@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class JouetBroken : MonoBehaviour, IInteractable
+public class JouetBroken : MonoBehaviour
 {
     public void Interact()
     {

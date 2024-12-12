@@ -9,6 +9,8 @@ public class DialogueUI : MonoBehaviour
     [SerializeField] private TMP_Text textLabel;
     [SerializeField] private DialogueObject testDialogue;
 
+    public bool isOpen {  get; private set; }
+
     private TypewriterEffect typewriterEffect;
    
     private void Start()
@@ -22,6 +24,7 @@ public class DialogueUI : MonoBehaviour
 
     public void ShowDialogue(DialogueObject dialogueObject)
     {
+        isOpen = true;
         dialogueBox.SetActive(true);
         StartCoroutine(StepThroughDialogue(dialogueObject));
     }
@@ -33,7 +36,7 @@ public class DialogueUI : MonoBehaviour
         foreach (string dialogue in dialogueObject.Dialogue)
         {
             yield return typewriterEffect.Run(dialogue, textLabel);
-            yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
+            yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.E));
         }
 
         CloseDialogueBox();
@@ -41,7 +44,7 @@ public class DialogueUI : MonoBehaviour
 
     private void CloseDialogueBox()
     {
-
+        isOpen = false;
         dialogueBox.SetActive(false);
         textLabel.text = string.Empty;
     }

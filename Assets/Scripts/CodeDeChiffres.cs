@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CodeDeChiffres : MonoBehaviour, IInteractable
+public class CodeDeChiffres : MonoBehaviour
 {
     public int[] code;
     public AudioSource succeedSound;

@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LutinChocolat : MonoBehaviour, IInteractable
+public class LutinChocolat : MonoBehaviour
 {
     public Animator animator;
-    private PlayerMovement player;
+    private Player player;
 
     public void Interact()
     {
@@ -16,7 +16,7 @@ public class LutinChocolat : MonoBehaviour, IInteractable
 
     void Start()
     {
-        player = FindAnyObjectByType<PlayerMovement>();
+        player = FindAnyObjectByType<Player>();
     }
 
     void Update()

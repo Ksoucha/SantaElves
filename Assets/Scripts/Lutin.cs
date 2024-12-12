@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Lutin : MonoBehaviour, IInteractable
+public class Lutin : MonoBehaviour
 {
     public float moveSpeed = 2;
     public Transform waypoint1;
@@ -10,7 +10,7 @@ public class Lutin : MonoBehaviour, IInteractable
 
     Vector3 originalPosition;
     public Animator animator;
-    private PlayerMovement player;
+    private Player player;
 
     public void Interact()
     {
@@ -23,7 +23,7 @@ public class Lutin : MonoBehaviour, IInteractable
     {
         originalPosition = transform.position;
         StartCoroutine(BiscuitCoroutine());
-        player = FindAnyObjectByType<PlayerMovement>();
+        player = FindAnyObjectByType<Player>();
     }
 
     void Update()

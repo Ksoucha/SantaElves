@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SecretDoor : MonoBehaviour, IInteractable
+public class SecretDoor : MonoBehaviour
 {
     public void Interact()
     {

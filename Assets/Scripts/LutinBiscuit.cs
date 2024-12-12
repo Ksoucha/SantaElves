@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LutinBiscuit : MonoBehaviour, IInteractable
+public class LutinBiscuit : MonoBehaviour
 {
     public Animator animator;
-    private PlayerMovement player;
+    private Player player;
 
     void Start()
     {
-        player = FindAnyObjectByType<PlayerMovement>();
+        player = FindAnyObjectByType<Player>();
     }
 
     void Update()
