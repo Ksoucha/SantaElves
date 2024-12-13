@@ -15,6 +15,8 @@ public class DialogueActivator : MonoBehaviour, IInteractable
     [SerializeField] private DialogueObject ninthDialogueObject;
     [SerializeField] private DialogueObject tenthDialogueObject;
 
+    public GameObject battery;
+
 
     private void OnTriggerEnter(Collider other)
     {
@@ -72,6 +74,7 @@ public class DialogueActivator : MonoBehaviour, IInteractable
         else if (DialogueTriggers.batteryInHand == true)
         {
             player.DialogueUI.ShowDialogue(secondDialogueObject);
+            battery.SetActive(false);
         }
         else
         {
