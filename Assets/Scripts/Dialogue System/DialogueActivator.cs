@@ -4,7 +4,12 @@ using UnityEngine;
 
 public class DialogueActivator : MonoBehaviour, IInteractable
 {
-    [SerializeField] private DialogueObject dialogueObject;
+    [SerializeField] private DialogueObject firstDialogueObject;
+    [SerializeField] private DialogueObject secondDialogueObject;
+    [SerializeField] private DialogueObject thirdDialogueObject;
+    [SerializeField] private DialogueObject fourthDialogueObject;
+    [SerializeField] private DialogueObject fifthDialogueObject;
+    [SerializeField] private DialogueObject sixthDialogueObject;
 
 
     private void OnTriggerEnter(Collider other)
@@ -30,7 +35,7 @@ public class DialogueActivator : MonoBehaviour, IInteractable
 
     public void Interact(Player player)
     {
-        player.DialogueUI.ShowDialogue(dialogueObject);
+        player.DialogueUI.ShowDialogue(firstDialogueObject);
     }
 
 }

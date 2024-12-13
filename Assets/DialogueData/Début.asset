@@ -13,5 +13,9 @@ MonoBehaviour:
   m_Name: "D\xE9but"
   m_EditorClassIdentifier: 
   dialogue:
-  - 
-  - 
+  - "Je m'appelle Lutin Pain D'\xC9pice."
+  - "Je suis en train de travailler sur les cadeaux du P\xE8re No\xEBl, dans notre
+    usine."
+  - "Je veux faire un jouet extra sp\xE9cial pour que le P\xE8re No\xEBl soit fier
+    de moi."
+  - "Je ne suis pas certain par o\xF9 commencer..."

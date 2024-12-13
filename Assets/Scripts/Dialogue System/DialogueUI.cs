@@ -19,7 +19,7 @@ public class DialogueUI : MonoBehaviour
         typewriterEffect = GetComponent<TypewriterEffect>();
         ShowDialogue(startDialogue);
 
-        CloseDialogueBox();
+        //CloseDialogueBox();
 
     }
 

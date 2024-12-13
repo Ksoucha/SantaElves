@@ -10,13 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 85178d028e954e54483a4a03d3f7139e, type: 3}
-  m_Name: Test
+  m_Name: LBo 1
   m_EditorClassIdentifier: 
   dialogue:
-  - First dialogue test
-  - Second dialogue test
-  responses:
-  - reponseText: Oui
-    dialogueObject: {fileID: 11400000, guid: b504a01c78f972c4dbd182675d816e99, type: 2}
-  - reponseText: Non
-    dialogueObject: {fileID: 11400000, guid: 8ef7ced2b9fadea42a179f0a964dfe6e, type: 2}
+  - "N'oublie pas d'\xEAtre prudent, lutin Pain D'\xC9pice."
+  - "Lutin Chocolat a lav\xE9 le plancher tant\xF4t et il est super glissant."
+  - Il a mis beaucoup d'eau... On dirait une patinoire.
