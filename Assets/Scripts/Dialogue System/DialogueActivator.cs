@@ -6,10 +6,7 @@ public class DialogueActivator : MonoBehaviour, IInteractable
 {
     [SerializeField] private DialogueObject firstDialogueObject;
     [SerializeField] private DialogueObject secondDialogueObject;
-    [SerializeField] private DialogueObject thirdDialogueObject;
-    [SerializeField] private DialogueObject fourthDialogueObject;
-    [SerializeField] private DialogueObject fifthDialogueObject;
-    [SerializeField] private DialogueObject sixthDialogueObject;
+
 
 
     private void OnTriggerEnter(Collider other)
@@ -35,7 +32,14 @@ public class DialogueActivator : MonoBehaviour, IInteractable
 
     public void Interact(Player player)
     {
-        player.DialogueUI.ShowDialogue(firstDialogueObject);
+        if (DialogueTriggers.batteryInHand == true)
+        {
+            player.DialogueUI.ShowDialogue(secondDialogueObject);
+        }
+        else
+        {
+            player.DialogueUI.ShowDialogue(firstDialogueObject);
+        }
     }
 
 }
