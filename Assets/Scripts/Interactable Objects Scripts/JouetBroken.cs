@@ -16,6 +16,7 @@ public class JouetBroken : MonoBehaviour, IInteractable
         if (dialogueUI != null)
         {
             dialogueUI.ShowDialogue(dialogueObject);
+            /*
             if (DialogueTriggers.instance)
             {
                 if (!DialogueTriggers.instance.HasFoundMissingPiece)
@@ -27,17 +28,10 @@ public class JouetBroken : MonoBehaviour, IInteractable
                         missionIcon.ShowGreenMissionIcon();
                     }
                 }
+            
             }
+            */
         }
     }
 
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }
 }

@@ -11,6 +11,7 @@ public class Screwdriver : MonoBehaviour, IInteractable
 
     public void Interact(Player player)
     {
+        /*
         if (DialogueTriggers.instance)
         {
             if (DialogueTriggers.instance.HasFoundMissingPiece && !DialogueTriggers.instance.HasScrewdriver)
@@ -23,6 +24,7 @@ public class Screwdriver : MonoBehaviour, IInteractable
                 }
             }
         }
+        */
         
         Debug.Log("Screwdriver");
     }

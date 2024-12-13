@@ -17,6 +17,7 @@ public class PereNoel : MonoBehaviour, IInteractable
         DialogueUI dialogueUI = FindObjectOfType<DialogueUI>();
         if (dialogueUI != null)
         {
+            /*
             if (DialogueTriggers.instance != null)
             {
                 if (DialogueTriggers.instance.HasFixedToy)
@@ -29,6 +30,7 @@ public class PereNoel : MonoBehaviour, IInteractable
                     dialogueUI.ShowDialogue(dialogueObject);
                 }
             }
+            */
         }
     }
 

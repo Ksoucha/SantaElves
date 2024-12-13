@@ -16,6 +16,7 @@ public class LutinChocolat : Lutin
     {
         Debug.Log("Lutin Chocolat");
 
+        /*
         if (DialogueTriggers.instance)
         {
             if (DialogueTriggers.instance.HasBonbon && DialogueTriggers.instance.talkedWithChocolatWithBonbon)
@@ -41,15 +42,9 @@ public class LutinChocolat : Lutin
                     dialogueUI.ShowDialogue(dialogueObject);
                 }
             }
-        }
-    }
-
-    void Start()
-    {
-    }
-
-    void Update()
-    {
         
+        }
+        */
     }
+
 }

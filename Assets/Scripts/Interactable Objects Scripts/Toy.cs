@@ -16,6 +16,7 @@ public class Toy : MonoBehaviour, IInteractable
         if (dialogueUI != null)
         {
             dialogueUI.ShowDialogue(dialogueObject);
+            /*
             if (DialogueTriggers.instance)
             {
                 if (DialogueTriggers.instance.HasScrewdriver && !DialogueTriggers.instance.HasFixedToy)
@@ -28,6 +29,7 @@ public class Toy : MonoBehaviour, IInteractable
                     }
                 }
             }
+            */
         }
         Debug.Log("TOY");
     }

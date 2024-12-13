@@ -13,6 +13,7 @@ public class LutinBonbon : Lutin
 
     public override void Interact(Player player)
     {
+        /*
         if (DialogueTriggers.instance)
         {
             if (DialogueTriggers.instance.HasFoundMissingPiece && !DialogueTriggers.instance.talkedWithBonbon)
@@ -25,6 +26,7 @@ public class LutinBonbon : Lutin
                 }
             }
         }
+        */
         Debug.Log("Lutin Bonbon");
     }
 

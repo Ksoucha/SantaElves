@@ -11,6 +11,7 @@ public class Candy : MonoBehaviour, IInteractable
 
     public void Interact(Player player)
     {
+        /*
         if (DialogueTriggers.instance)
         {
             if (!DialogueTriggers.instance.HasBonbon)
@@ -23,6 +24,7 @@ public class Candy : MonoBehaviour, IInteractable
                 }
             }
         }
+        */
     }
 
     void Start()

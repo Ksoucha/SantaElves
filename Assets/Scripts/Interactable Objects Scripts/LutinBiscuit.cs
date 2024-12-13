@@ -25,6 +25,7 @@ public class LutinBiscuit : Lutin
     public override void Interact(Player player)
     {
         base.Interact(player);
+        /*
         if (DialogueTriggers.instance)
         {
             if (!DialogueTriggers.instance.talkedWithBiscuit)
@@ -37,6 +38,7 @@ public class LutinBiscuit : Lutin
                 }
             }
         }
+        */
         Debug.Log("Lutin Biscuit");
     }
 }
