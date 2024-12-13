@@ -2,24 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CodeDeChiffres : MonoBehaviour, IInteractable
+public class CodeDeChiffres : MonoBehaviour
 {
     public int[] code;
-    public AudioSource succeedSound;
-    public AudioSource failSound;
-    public GameObject key;
+    //public AudioSource succeedSound;
+    //public AudioSource failSound;
+    //public GameObject key;
 
     int currentIndex;
     private bool isFinished;
 
-    public void Interact()
-    {
-        throw new System.NotImplementedException();
-    }
-
     void Start()
     {
-        key.SetActive(false);
+        //key.SetActive(false);
     }
 
     void Update()
@@ -38,19 +33,14 @@ public class CodeDeChiffres : MonoBehaviour, IInteractable
             if (currentIndex == code.Length)
             {
                 isFinished = true;
-                key.SetActive(true);
-                succeedSound.Play();
+                //key.SetActive(true);
+                //succeedSound.Play();
             }
         }
         else
         {
             currentIndex = 0;
-            failSound.Play();
+            //failSound.Play();
         }
-    }
-
-    public void Interact(Player player)
-    {
-        throw new System.NotImplementedException();
     }
 }
