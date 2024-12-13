@@ -37,7 +37,13 @@ public class Player : MonoBehaviour
 
     [SerializeField] private DialogueUI dialogueUI;
 
+    // UI
     public DialogueUI DialogueUI => dialogueUI;
+    public GameObject GameControlUI;
+    [SerializeField]
+    private float TimeBeforeDisablingGameControlUI = 15f;
+
+    // Objects to interact
     public IInteractable interactable { get; set; }
 
     private void Start()
@@ -46,6 +52,8 @@ public class Player : MonoBehaviour
         rb.freezeRotation = true;
 
         readyToJump = true;
+
+        Invoke("DisableGameControlsUI", TimeBeforeDisablingGameControlUI);
     }
 
     private void Update()
@@ -167,6 +175,11 @@ public class Player : MonoBehaviour
     private void ResetJump()
     {
         readyToJump = true;
+    }
+
+    private void DisableGameControlsUI()
+    {
+        GameControlUI.SetActive(false);
     }
 }
 
