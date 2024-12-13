@@ -34,7 +34,6 @@ public class CodeDeChiffres : MonoBehaviour
             currentIndex++;
             if (currentIndex == code.Length)
             {
-                /*
                 isFinished = true;
                 if (door != null)
                 {
@@ -43,8 +42,7 @@ public class CodeDeChiffres : MonoBehaviour
                 if (succeedSound != null)
                 {
                     succeedSound.Play();
-                }
-                */
+                }   
             }
         }
         else
