@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DialogueTriggers : MonoBehaviour
 {
-    public bool batteryInHand = false;
+    public static bool batteryInHand = true;
     public bool giftedBattery = false;
 
 
