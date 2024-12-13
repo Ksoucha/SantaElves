@@ -11,6 +11,6 @@ public class SecretDoor : MonoBehaviour, IInteractable
 
     public void Interact(Player player)
     {
-        Debug.Log("Secret Doooor");
+        Debug.Log("Secret Door");
     }
 }
