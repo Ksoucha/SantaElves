@@ -2,8 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Screwdriver : MonoBehaviour, IInteractable
+public class Wrench : MonoBehaviour, IInteractable
 {
+    //public GameObject wrench;
+
     public void Interact()
     {
         throw new System.NotImplementedException();
@@ -11,6 +13,8 @@ public class Screwdriver : MonoBehaviour, IInteractable
 
     public void Interact(Player player)
     {
+        //wrench.SetActive(true);
+        DialogueTriggers.wrenchInHand = true;
         /*
         if (DialogueTriggers.instance)
         {

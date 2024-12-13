@@ -16,7 +16,7 @@ public class DialogueActivator : MonoBehaviour, IInteractable
     [SerializeField] private DialogueObject tenthDialogueObject;
 
     public GameObject battery;
-
+    public GameObject ball;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -58,6 +58,7 @@ public class DialogueActivator : MonoBehaviour, IInteractable
         else if (DialogueTriggers.candyInHand == true)
         {
             player.DialogueUI.ShowDialogue(sixthDialogueObject);
+            DialogueTriggers.giftedCandy = true;
         }
         else if (DialogueTriggers.giftedBall == true)
         {
@@ -65,16 +66,21 @@ public class DialogueActivator : MonoBehaviour, IInteractable
         }
         else if (DialogueTriggers.ballInHand == true)
         {
+            //DialogueTriggers.giftedBattery = false;
             player.DialogueUI.ShowDialogue(fourthDialogueObject);
+            ball.SetActive(false);
+            DialogueTriggers.giftedBall = true;
         }
         else if (DialogueTriggers.giftedBattery == true)
         {
             player.DialogueUI.ShowDialogue(thirdDialogueObject);
+            DialogueTriggers.giftedBattery = false;
         }
         else if (DialogueTriggers.batteryInHand == true)
         {
             player.DialogueUI.ShowDialogue(secondDialogueObject);
             battery.SetActive(false);
+            DialogueTriggers.batteryInHand = false;
             DialogueTriggers.giftedBattery = true;
         }
         else
