@@ -17097,6 +17097,7 @@ GameObject:
   m_Component:
   - component: {fileID: 643430983}
   - component: {fileID: 643430985}
+  - component: {fileID: 643430986}
   m_Layer: 0
   m_Name: "P\xE8reNoel"
   m_TagString: Untagged
@@ -17141,6 +17142,28 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 90, y: 50, z: 80}
   m_Center: {x: -40, y: 10, z: -20}
+--- !u!114 &643430986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 643430982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 027a62b1e2953474f9e6e944d553478e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firstDialogueObject: {fileID: 11400000, guid: a79e8ab759a64e148898cd086a29d457, type: 2}
+  secondDialogueObject: {fileID: 11400000, guid: a79e8ab759a64e148898cd086a29d457, type: 2}
+  thirdDialogueObject: {fileID: 11400000, guid: 37830f0ad1bc5a94da7ad99729f68285, type: 2}
+  fourthDialogueObject: {fileID: 11400000, guid: 7c6358a410ec55e4793034f69575436d, type: 2}
+  fifthDialogueObject: {fileID: 11400000, guid: 7c6358a410ec55e4793034f69575436d, type: 2}
+  sixthDialogueObject: {fileID: 11400000, guid: 7c6358a410ec55e4793034f69575436d, type: 2}
+  seventhDialogueObject: {fileID: 11400000, guid: 7c6358a410ec55e4793034f69575436d, type: 2}
+  eightDialogueObject: {fileID: 11400000, guid: 7c6358a410ec55e4793034f69575436d, type: 2}
+  ninthDialogueObject: {fileID: 11400000, guid: 7c6358a410ec55e4793034f69575436d, type: 2}
+  tenthDialogueObject: {fileID: 11400000, guid: ba1895e89d00b2b4abb6afd8e29d8d68, type: 2}
 --- !u!43 &644374517
 Mesh:
   m_ObjectHideFlags: 0
@@ -20621,8 +20644,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 027a62b1e2953474f9e6e944d553478e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstDialogueObject: {fileID: 0}
-  secondDialogueObject: {fileID: 0}
+  firstDialogueObject: {fileID: 11400000, guid: 4084f29f363db284cbce4a39652d0794, type: 2}
+  secondDialogueObject: {fileID: 11400000, guid: 4084f29f363db284cbce4a39652d0794, type: 2}
+  thirdDialogueObject: {fileID: 11400000, guid: 4084f29f363db284cbce4a39652d0794, type: 2}
+  fourthDialogueObject: {fileID: 11400000, guid: 4084f29f363db284cbce4a39652d0794, type: 2}
+  fifthDialogueObject: {fileID: 11400000, guid: 4084f29f363db284cbce4a39652d0794, type: 2}
+  sixthDialogueObject: {fileID: 11400000, guid: 4084f29f363db284cbce4a39652d0794, type: 2}
+  seventhDialogueObject: {fileID: 11400000, guid: 4084f29f363db284cbce4a39652d0794, type: 2}
+  eightDialogueObject: {fileID: 11400000, guid: c81d31b70b76e514a9fbe2d41751cd01, type: 2}
+  ninthDialogueObject: {fileID: 11400000, guid: c81d31b70b76e514a9fbe2d41751cd01, type: 2}
+  tenthDialogueObject: {fileID: 11400000, guid: 722c8591de7700249b31a6fbcbc34e1d, type: 2}
 --- !u!1001 &866788906
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28061,6 +28092,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firstDialogueObject: {fileID: 11400000, guid: a156bb5e12dd3194abcd7a4233c5691f, type: 2}
   secondDialogueObject: {fileID: 11400000, guid: 315b36412c243a24cae69627139347ec, type: 2}
+  thirdDialogueObject: {fileID: 11400000, guid: 5d177f5aef831fd41bb13d1eb855cdca, type: 2}
+  fourthDialogueObject: {fileID: 11400000, guid: 5d177f5aef831fd41bb13d1eb855cdca, type: 2}
+  fifthDialogueObject: {fileID: 11400000, guid: 5d177f5aef831fd41bb13d1eb855cdca, type: 2}
+  sixthDialogueObject: {fileID: 11400000, guid: 5d177f5aef831fd41bb13d1eb855cdca, type: 2}
+  seventhDialogueObject: {fileID: 11400000, guid: 5d177f5aef831fd41bb13d1eb855cdca, type: 2}
+  eightDialogueObject: {fileID: 11400000, guid: 5d177f5aef831fd41bb13d1eb855cdca, type: 2}
+  ninthDialogueObject: {fileID: 11400000, guid: 5d177f5aef831fd41bb13d1eb855cdca, type: 2}
+  tenthDialogueObject: {fileID: 11400000, guid: a19de963067760a4593a060601212b1d, type: 2}
 --- !u!65 &1232305720
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -36016,6 +36055,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1659127080}
+  - component: {fileID: 1659127082}
+  - component: {fileID: 1659127081}
   m_Layer: 0
   m_Name: "JouetBris\xE9"
   m_TagString: Untagged
@@ -36039,6 +36080,54 @@ Transform:
   - {fileID: 1951980470}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1659127081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1659127079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 027a62b1e2953474f9e6e944d553478e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firstDialogueObject: {fileID: 11400000, guid: 5f9fab5507778d549905755b003bf6dd, type: 2}
+  secondDialogueObject: {fileID: 11400000, guid: 5f9fab5507778d549905755b003bf6dd, type: 2}
+  thirdDialogueObject: {fileID: 11400000, guid: 5f9fab5507778d549905755b003bf6dd, type: 2}
+  fourthDialogueObject: {fileID: 11400000, guid: 5f9fab5507778d549905755b003bf6dd, type: 2}
+  fifthDialogueObject: {fileID: 11400000, guid: 5f9fab5507778d549905755b003bf6dd, type: 2}
+  sixthDialogueObject: {fileID: 11400000, guid: 5f9fab5507778d549905755b003bf6dd, type: 2}
+  seventhDialogueObject: {fileID: 11400000, guid: 5f9fab5507778d549905755b003bf6dd, type: 2}
+  eightDialogueObject: {fileID: 11400000, guid: 76d94f43d23d1ef4c8e03dc4e27379a4, type: 2}
+  ninthDialogueObject: {fileID: 11400000, guid: 0105bf0350a4a484aaefaed6507967fd, type: 2}
+  tenthDialogueObject: {fileID: 11400000, guid: 5f9fab5507778d549905755b003bf6dd, type: 2}
+--- !u!65 &1659127082
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1659127079}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 10, y: 15, z: 10}
+  m_Center: {x: 0, y: 5, z: 0}
+--- !u!1 &1660444314 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 58c765246de513944870f857ab8eef90, type: 3}
+  m_PrefabInstance: {fileID: 1951980469}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1661827511
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39174,6 +39263,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1819700073}
   - component: {fileID: 1819700074}
+  - component: {fileID: 1819700076}
+  - component: {fileID: 1819700075}
   m_Layer: 0
   m_Name: LutinChocolat
   m_TagString: Untagged
@@ -39214,6 +39305,49 @@ MonoBehaviour:
   waypoint1: {fileID: 0}
   waypoint2: {fileID: 0}
   animator: {fileID: 0}
+--- !u!114 &1819700075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1819700072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 027a62b1e2953474f9e6e944d553478e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firstDialogueObject: {fileID: 11400000, guid: f5bfc749f294a234398c2216b4dd3b5b, type: 2}
+  secondDialogueObject: {fileID: 11400000, guid: f5bfc749f294a234398c2216b4dd3b5b, type: 2}
+  thirdDialogueObject: {fileID: 11400000, guid: d8d0d75fd3f1aa449a29753285f92d15, type: 2}
+  fourthDialogueObject: {fileID: 11400000, guid: d8d0d75fd3f1aa449a29753285f92d15, type: 2}
+  fifthDialogueObject: {fileID: 11400000, guid: d8d0d75fd3f1aa449a29753285f92d15, type: 2}
+  sixthDialogueObject: {fileID: 11400000, guid: 1bc387ef640193145abbf76cfc125e1a, type: 2}
+  seventhDialogueObject: {fileID: 11400000, guid: 1bc387ef640193145abbf76cfc125e1a, type: 2}
+  eightDialogueObject: {fileID: 11400000, guid: 1bc387ef640193145abbf76cfc125e1a, type: 2}
+  ninthDialogueObject: {fileID: 11400000, guid: 1bc387ef640193145abbf76cfc125e1a, type: 2}
+  tenthDialogueObject: {fileID: 11400000, guid: 83f23167994aba94d880034a734e98a0, type: 2}
+--- !u!65 &1819700076
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1819700072}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 15, y: 15, z: 15}
+  m_Center: {x: 0, y: 5, z: 0}
 --- !u!1001 &1821040086
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41474,13 +41608,38 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 58c765246de513944870f857ab8eef90, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1951980473}
   m_SourcePrefab: {fileID: 100100000, guid: 58c765246de513944870f857ab8eef90, type: 3}
 --- !u!4 &1951980470 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 58c765246de513944870f857ab8eef90, type: 3}
   m_PrefabInstance: {fileID: 1951980469}
   m_PrefabAsset: {fileID: 0}
+--- !u!64 &1951980473
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1660444314}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -4851328515596957163, guid: 58c765246de513944870f857ab8eef90, type: 3}
 --- !u!1001 &1952812355
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -44158,6 +44317,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firstDialogueObject: {fileID: 0}
   secondDialogueObject: {fileID: 0}
+  thirdDialogueObject: {fileID: 0}
+  fourthDialogueObject: {fileID: 0}
+  fifthDialogueObject: {fileID: 0}
+  sixthDialogueObject: {fileID: 0}
+  seventhDialogueObject: {fileID: 0}
+  eightDialogueObject: {fileID: 0}
+  ninthDialogueObject: {fileID: 0}
+  tenthDialogueObject: {fileID: 0}
 --- !u!1001 &2089019665
 PrefabInstance:
   m_ObjectHideFlags: 0

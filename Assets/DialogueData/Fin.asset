@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85178d028e954e54483a4a03d3f7139e, type: 3}
+  m_Name: Fin
+  m_EditorClassIdentifier: 
+  dialogue:
+  - "Dans un monde o\xF9 tout semble jetable et rempla\xE7able, il est essentiel
+    de se rappeler que la v\xE9ritable valeur r\xE9side dans ce que nous conservons,
+    r\xE9parons et ch\xE9rissons."
+  - 'La surconsommation nous fait oublier que chaque objet a une histoire, chaque
+    geste un impact. '
+  - "Prenons soin de notre plan\xE8te, car elle est notre v\xE9ritable cadeau."
+  - "Joyeux temps des f\xEAtes!"

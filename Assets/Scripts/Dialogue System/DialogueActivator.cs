@@ -6,7 +6,14 @@ public class DialogueActivator : MonoBehaviour, IInteractable
 {
     [SerializeField] private DialogueObject firstDialogueObject;
     [SerializeField] private DialogueObject secondDialogueObject;
-
+    [SerializeField] private DialogueObject thirdDialogueObject;
+    [SerializeField] private DialogueObject fourthDialogueObject;
+    [SerializeField] private DialogueObject fifthDialogueObject;
+    [SerializeField] private DialogueObject sixthDialogueObject;
+    [SerializeField] private DialogueObject seventhDialogueObject;
+    [SerializeField] private DialogueObject eightDialogueObject;
+    [SerializeField] private DialogueObject ninthDialogueObject;
+    [SerializeField] private DialogueObject tenthDialogueObject;
 
 
     private void OnTriggerEnter(Collider other)
@@ -32,7 +39,39 @@ public class DialogueActivator : MonoBehaviour, IInteractable
 
     public void Interact(Player player)
     {
-        if (DialogueTriggers.batteryInHand == true)
+        if (DialogueTriggers.brokenToyInHand == true)
+        {
+            player.DialogueUI.ShowDialogue(tenthDialogueObject);
+        }
+        else if (DialogueTriggers.wrenchInHand == true)
+        {
+            player.DialogueUI.ShowDialogue(ninthDialogueObject);
+        }
+        else if (DialogueTriggers.secretDoorOpen == true)
+        {
+            player.DialogueUI.ShowDialogue(eightDialogueObject);
+        }
+        else if (DialogueTriggers.giftedCandy == true)
+        {
+            player.DialogueUI.ShowDialogue(seventhDialogueObject);
+        }
+        else if (DialogueTriggers.candyInHand == true)
+        {
+            player.DialogueUI.ShowDialogue(sixthDialogueObject);
+        }
+        else if (DialogueTriggers.giftedBall == true)
+        {
+            player.DialogueUI.ShowDialogue(fifthDialogueObject);
+        }
+        else if (DialogueTriggers.ballInHand == true)
+        {
+            player.DialogueUI.ShowDialogue(fourthDialogueObject);
+        }
+        else if (DialogueTriggers.giftedBattery == true)
+        {
+            player.DialogueUI.ShowDialogue(thirdDialogueObject);
+        }
+        else if (DialogueTriggers.batteryInHand == true)
         {
             player.DialogueUI.ShowDialogue(secondDialogueObject);
         }
