@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Candy : MonoBehaviour, IInteractable
 {
+    //public GameObject candy;
+
     public void Interact()
     {
         throw new System.NotImplementedException();
@@ -11,6 +13,8 @@ public class Candy : MonoBehaviour, IInteractable
 
     public void Interact(Player player)
     {
+        //candy.SetActive(true);
+        DialogueTriggers.candyInHand = true;
         /*
         if (DialogueTriggers.instance)
         {

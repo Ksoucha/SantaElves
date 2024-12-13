@@ -5,6 +5,7 @@ using UnityEngine;
 public class Toy : MonoBehaviour, IInteractable
 {
     public DialogueObject dialogueObject;
+    //public GameObject toy;
 
     public void Interact()
     {
@@ -13,6 +14,9 @@ public class Toy : MonoBehaviour, IInteractable
 
     public void Interact(Player player)
     {
+        //candy.SetActive(true);
+        DialogueTriggers.brokenToyInHand = true;
+
         DialogueUI dialogueUI = FindObjectOfType<DialogueUI>();
         if (dialogueUI != null)
         {
