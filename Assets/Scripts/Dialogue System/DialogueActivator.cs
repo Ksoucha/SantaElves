@@ -75,6 +75,7 @@ public class DialogueActivator : MonoBehaviour, IInteractable
         {
             player.DialogueUI.ShowDialogue(secondDialogueObject);
             battery.SetActive(false);
+            DialogueTriggers.giftedBattery = true;
         }
         else
         {
