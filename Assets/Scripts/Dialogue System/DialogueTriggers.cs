@@ -5,16 +5,15 @@ using UnityEngine;
 public class DialogueTriggers : MonoBehaviour
 {
     public static DialogueTriggers instance;
-    public static bool batteryInHand = true;
-    public bool giftedBattery = false;
-    public bool talkedWithBiscuit = false;
-    public bool talkedWithBonbon = false;
-    public bool talkedWithChocolat = false;
-    public bool talkedWithChocolatWithBonbon = false;
-    public bool HasBonbon = false;
-    public bool HasFoundMissingPiece = false;
-    public bool HasScrewdriver = false;
-    public bool HasFixedToy = false;
+    public static bool batteryInHand = false;
+    public static bool giftedBattery = false;
+    public static bool ballInHand = false;
+    public static bool giftedBall = false;
+    public static bool candyInHand = false;
+    public static bool giftedCandy = false;
+    public bool secretDoorOpen = false;
+    public bool wrenchInHand = false;
+    public bool brokenToyInHand = false;
 
     public void Awake()
     {
