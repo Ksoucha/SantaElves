@@ -11340,6 +11340,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 111804, guid: 6a2b2b2409a9b034daf0685299d289e9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 850179680}
+    - targetCorrespondingSourceObject: {fileID: 111804, guid: 6a2b2b2409a9b034daf0685299d289e9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 850179686}
   m_SourcePrefab: {fileID: 100100000, guid: 6a2b2b2409a9b034daf0685299d289e9, type: 3}
 --- !u!1 &374295174
 GameObject:
@@ -17556,6 +17559,7 @@ MonoBehaviour:
   ninthDialogueObject: {fileID: 11400000, guid: 7c6358a410ec55e4793034f69575436d, type: 2}
   tenthDialogueObject: {fileID: 11400000, guid: ba1895e89d00b2b4abb6afd8e29d8d68, type: 2}
   battery: {fileID: 0}
+  ball: {fileID: 0}
 --- !u!43 &644374517
 Mesh:
   m_ObjectHideFlags: 0
@@ -20888,17 +20892,30 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.14528273
-  m_Center: {x: 0.00000000372529, y: -0.13542636, z: 0.00000000372529}
+  m_Radius: 0.58014715
+  m_Center: {x: -5.205476e-25, y: -0.014283931, z: 0.14151472}
 --- !u!4 &850179683 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 488574, guid: 6a2b2b2409a9b034daf0685299d289e9, type: 3}
   m_PrefabInstance: {fileID: 370405926}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &850179686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 850179676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a481dd6488130148a8f52df17e7e3d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ball: {fileID: 518800765}
 --- !u!4 &852934176 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7929928940883415223, guid: 60f92f0accfa9a04f91b66a3c30bcf41, type: 3}
@@ -21068,6 +21085,7 @@ MonoBehaviour:
   ninthDialogueObject: {fileID: 11400000, guid: c81d31b70b76e514a9fbe2d41751cd01, type: 2}
   tenthDialogueObject: {fileID: 11400000, guid: 722c8591de7700249b31a6fbcbc34e1d, type: 2}
   battery: {fileID: 0}
+  ball: {fileID: 0}
 --- !u!1001 &866788906
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25040,6 +25058,18 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: b617cd1d57d9c42b992082c16be92235, type: 3}
   m_PrefabInstance: {fileID: 1823025183}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1051944587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1051944568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a5ab65c1c2be5343b972b68c0a24e68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1059853573 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 424666, guid: 1d3c74582f372f747a9a812ceb0ac6cd, type: 3}
@@ -28588,6 +28618,7 @@ MonoBehaviour:
   ninthDialogueObject: {fileID: 11400000, guid: 5d177f5aef831fd41bb13d1eb855cdca, type: 2}
   tenthDialogueObject: {fileID: 11400000, guid: a19de963067760a4593a060601212b1d, type: 2}
   battery: {fileID: 768070536}
+  ball: {fileID: 0}
 --- !u!65 &1232305720
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31245,6 +31276,10 @@ PrefabInstance:
     - target: {fileID: 3846824949152579431, guid: 2d6867d6e54753f449d2768e3269e3a9, type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8387144466603898159, guid: 2d6867d6e54753f449d2768e3269e3a9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.004
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -37116,6 +37151,7 @@ MonoBehaviour:
   ninthDialogueObject: {fileID: 11400000, guid: 0105bf0350a4a484aaefaed6507967fd, type: 2}
   tenthDialogueObject: {fileID: 11400000, guid: 5f9fab5507778d549905755b003bf6dd, type: 2}
   battery: {fileID: 0}
+  ball: {fileID: 0}
 --- !u!65 &1659127082
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -40347,7 +40383,8 @@ MonoBehaviour:
   eightDialogueObject: {fileID: 11400000, guid: 1bc387ef640193145abbf76cfc125e1a, type: 2}
   ninthDialogueObject: {fileID: 11400000, guid: 1bc387ef640193145abbf76cfc125e1a, type: 2}
   tenthDialogueObject: {fileID: 11400000, guid: 83f23167994aba94d880034a734e98a0, type: 2}
-  battery: {fileID: 0}
+  battery: {fileID: 768070536}
+  ball: {fileID: 518800765}
 --- !u!65 &1819700076
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -40505,6 +40542,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: b617cd1d57d9c42b992082c16be92235, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1051944575}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: b617cd1d57d9c42b992082c16be92235, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1051944587}
   m_SourcePrefab: {fileID: 100100000, guid: b617cd1d57d9c42b992082c16be92235, type: 3}
 --- !u!1 &1826225926
 GameObject:
@@ -45611,6 +45651,7 @@ MonoBehaviour:
   ninthDialogueObject: {fileID: 0}
   tenthDialogueObject: {fileID: 0}
   battery: {fileID: 768070536}
+  ball: {fileID: 0}
 --- !u!1001 &2089019665
 PrefabInstance:
   m_ObjectHideFlags: 0
