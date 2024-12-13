@@ -16,6 +16,7 @@ public class DialogueUI : MonoBehaviour
     {
 
         typewriterEffect = GetComponent<TypewriterEffect>();
+
         CloseDialogueBox();
 
     }
@@ -30,14 +31,18 @@ public class DialogueUI : MonoBehaviour
     private IEnumerator StepThroughDialogue (DialogueObject dialogueObject)
     {
 
-
-        foreach (string dialogue in dialogueObject.Dialogue)
+        for (int i = 0; i < dialogueObject.Dialogue.Length; i++)
         {
+            string dialogue = dialogueObject.Dialogue[i];
             yield return typewriterEffect.Run(dialogue, textLabel);
+
             yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.E));
         }
 
-        CloseDialogueBox();
+        {
+            CloseDialogueBox();
+        }
+
     }
 
     private void CloseDialogueBox()
