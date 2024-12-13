@@ -69,6 +69,10 @@ public class Lutin : MonoBehaviour, IInteractable
 
     public virtual void Interact(Player player)
     {
+        Vector3 direction = player.transform.position - transform.position;
+        direction.Normalize();
+        transform.forward = direction;
+
         DialogueUI dialogueUI = FindObjectOfType<DialogueUI>();
         if (dialogueUI != null)
         {

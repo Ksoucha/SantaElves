@@ -10,8 +10,8 @@ public class CodeDeChiffres : MonoBehaviour
     public AudioSource failSound;
     
     [SerializeField] private Door door;
-    int currentIndex;
-    private bool isFinished;
+    int currentIndex = 0;
+    private bool isFinished = false;
 
     void Start()
     {
@@ -48,6 +48,7 @@ public class CodeDeChiffres : MonoBehaviour
         else
         {
             currentIndex = 0;
+            Debug.Log("Failed");
             if (failSound != null)
             {
                 failSound.Play();

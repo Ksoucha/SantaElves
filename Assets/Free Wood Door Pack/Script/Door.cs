@@ -55,7 +55,7 @@ namespace DoorScript
             }
         }
 
-        public void Unlock()
+        public virtual void Unlock()
         {
             Debug.Log("Door Unlocked!");
             isLocked = false;

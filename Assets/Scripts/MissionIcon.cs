@@ -12,8 +12,8 @@ public class MissionIcon : MonoBehaviour
 
     void Start()
     {
-        redHat = GetComponent<Image>();
-        redHat.enabled = true;
+        // redHat = GetComponent<Image>();
+        ShowRedMissionIcon();
     }
 
     void Update()

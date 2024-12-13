@@ -29,6 +29,7 @@ public class Wrench : MonoBehaviour, IInteractable
             }
         }
         */
+        player.Wrench.SetActive(true);
         Debug.Log("Screwdriver");
     }
 }

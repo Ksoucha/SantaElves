@@ -15,8 +15,7 @@ public class DialogueActivator : MonoBehaviour, IInteractable
     [SerializeField] private DialogueObject ninthDialogueObject;
     [SerializeField] private DialogueObject tenthDialogueObject;
 
-    public GameObject battery;
-    public GameObject ball;
+    
 
     private void OnTriggerEnter(Collider other)
     {
@@ -68,7 +67,7 @@ public class DialogueActivator : MonoBehaviour, IInteractable
         {
             //DialogueTriggers.giftedBattery = false;
             player.DialogueUI.ShowDialogue(fourthDialogueObject);
-            ball.SetActive(false);
+            player.ball.SetActive(false);
             DialogueTriggers.giftedBall = true;
         }
         else if (DialogueTriggers.giftedBattery == true)
@@ -79,7 +78,7 @@ public class DialogueActivator : MonoBehaviour, IInteractable
         else if (DialogueTriggers.batteryInHand == true)
         {
             player.DialogueUI.ShowDialogue(secondDialogueObject);
-            battery.SetActive(false);
+            player.battery.SetActive(false);
             DialogueTriggers.batteryInHand = false;
             DialogueTriggers.giftedBattery = true;
         }

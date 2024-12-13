@@ -45,6 +45,10 @@ public class Player : MonoBehaviour
 
     // Objects to interact
     public IInteractable interactable { get; set; }
+    // Objects that player can hold
+    public GameObject battery;
+    public GameObject ball;
+    public GameObject Wrench;
 
     private void Start()
     {
