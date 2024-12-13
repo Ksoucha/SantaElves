@@ -8,6 +8,7 @@ public class DialogueUI : MonoBehaviour
     [SerializeField] private GameObject dialogueBox;
     [SerializeField] private TMP_Text textLabel;
     [SerializeField] private DialogueObject startDialogue;
+    [SerializeField] private DialogueObject endDialogue;
 
     public bool isOpen {  get; private set; }
 
@@ -19,6 +20,14 @@ public class DialogueUI : MonoBehaviour
         ShowDialogue(startDialogue);
 
         //CloseDialogueBox();
+    }
+
+    private void Update()
+    {
+        if (DialogueTriggers.giftedToy == true)
+        {
+            ShowDialogue(endDialogue);
+        }
     }
 
     public void ShowDialogue(DialogueObject dialogueObject)
