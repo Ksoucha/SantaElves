@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85178d028e954e54483a4a03d3f7139e, type: 3}
+  m_Name: LBi 2
+  m_EditorClassIdentifier: 
+  dialogue:
+  - Merci pour ton aide!
+  - "Pour ton id\xE9e de cadeau..."
+  - "Mmh... Je ne sais pas si \xE7a peut t'aider, mais j'ai entendu parler d'une
+    pi\xE8ce secr\xE8te dans notre usine."
+  - "Peut-\xEAtre qu'il y aurait quelque chose qui pourrait t'aider dans cette pi\xE8ce?"
+  - Je n'en sais pas plus...
