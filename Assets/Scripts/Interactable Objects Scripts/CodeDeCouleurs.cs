@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CodeDeCouleurs : MonoBehaviour
+public class CodeDeCouleurs : MonoBehaviour, IInteractable
 {
     public int[] code;
     public AudioSource succeedSound;
@@ -47,5 +47,10 @@ public class CodeDeCouleurs : MonoBehaviour
             currentIndex = 0;
             failSound.Play();
         }
+    }
+
+    public void Interact(Player player)
+    {
+        throw new System.NotImplementedException();
     }
 }
