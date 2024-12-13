@@ -23,13 +23,8 @@ public class Lutin : MonoBehaviour, IInteractable
     void Start()
     {
         originalPosition = transform.position;
-        // StartCoroutine(BiscuitCoroutine());
+        //StartCoroutine(BiscuitCoroutine());
         player = FindAnyObjectByType<Player>();
-    }
-
-    void Update()
-    {
-        
     }
 
     IEnumerator BiscuitCoroutine()

@@ -25,17 +25,6 @@ public class Screwdriver : MonoBehaviour, IInteractable
             }
         }
         */
-        
         Debug.Log("Screwdriver");
-    }
-
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
     }
 }

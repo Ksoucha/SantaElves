@@ -22,7 +22,6 @@ public class DialogueActivator : MonoBehaviour, IInteractable
         {
             player.interactable = this;
         }
-        
     }
 
     private void OnTriggerExit(Collider other)
@@ -35,7 +34,6 @@ public class DialogueActivator : MonoBehaviour, IInteractable
             }
         }
     }
-
 
     public void Interact(Player player)
     {
@@ -80,5 +78,4 @@ public class DialogueActivator : MonoBehaviour, IInteractable
             player.DialogueUI.ShowDialogue(firstDialogueObject);
         }
     }
-
 }

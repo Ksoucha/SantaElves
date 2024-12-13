@@ -58,7 +58,6 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-
         if (dialogueUI)
         {
             if (dialogueUI.isOpen) return;
@@ -78,7 +77,7 @@ public class Player : MonoBehaviour
         }
 
         // ground check
-        grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.3f, whatIsGround);
+        //grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.3f, whatIsGround);
         //Stashed changes
 
         MyInput();

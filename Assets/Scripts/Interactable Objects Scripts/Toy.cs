@@ -5,6 +5,7 @@ using UnityEngine;
 public class Toy : MonoBehaviour, IInteractable
 {
     public DialogueObject dialogueObject;
+
     public void Interact()
     {
         throw new System.NotImplementedException();
@@ -32,15 +33,5 @@ public class Toy : MonoBehaviour, IInteractable
             */
         }
         Debug.Log("TOY");
-    }
-
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
     }
 }

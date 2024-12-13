@@ -4,15 +4,9 @@ using UnityEngine;
 
 public class LutinBiscuit : Lutin
 {
-
     void Start()
     {
         player = FindAnyObjectByType<Player>();
-    }
-
-    void Update()
-    {
-        
     }
 
     public override void Interact() 

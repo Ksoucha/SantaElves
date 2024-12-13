@@ -5,6 +5,7 @@ using UnityEngine;
 public class JouetBroken : MonoBehaviour, IInteractable
 {
     public DialogueObject dialogueObject;
+
     public void Interact()
     {
         throw new System.NotImplementedException();
@@ -28,10 +29,8 @@ public class JouetBroken : MonoBehaviour, IInteractable
                         missionIcon.ShowGreenMissionIcon();
                     }
                 }
-            
             }
             */
         }
     }
-
 }

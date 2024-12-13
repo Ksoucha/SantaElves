@@ -15,12 +15,10 @@ public class DialogueUI : MonoBehaviour
    
     private void Start()
     {
-
         typewriterEffect = GetComponent<TypewriterEffect>();
         ShowDialogue(startDialogue);
 
         //CloseDialogueBox();
-
     }
 
     public void ShowDialogue(DialogueObject dialogueObject)
@@ -32,7 +30,6 @@ public class DialogueUI : MonoBehaviour
 
     private IEnumerator StepThroughDialogue (DialogueObject dialogueObject)
     {
-
         for (int i = 0; i < dialogueObject.Dialogue.Length; i++)
         {
             string dialogue = dialogueObject.Dialogue[i];
@@ -44,7 +41,6 @@ public class DialogueUI : MonoBehaviour
         {
             CloseDialogueBox();
         }
-
     }
 
     private void CloseDialogueBox()
@@ -53,6 +49,4 @@ public class DialogueUI : MonoBehaviour
         dialogueBox.SetActive(false);
         textLabel.text = string.Empty;
     }
-
-
 }
