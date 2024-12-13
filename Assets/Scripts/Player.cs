@@ -50,19 +50,28 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
+
         if (dialogueUI)
         {
             if (dialogueUI.isOpen) return;
         }
 
         // ground check
-        //RaycastHit hit;
-        //grounded = Physics.Raycast(transform.position, Vector3.down, out hit, playerHeight * 3.5f + 3.5f, whatIsGround);
-        //if (hit.collider)
-        //{
-        //    Debug.Log(hit.collider.gameObject.name);
-        //}
-        grounded = rb.velocity.y == 0.0f;
+        RaycastHit hit;
+        grounded = Physics.Raycast(transform.position, Vector3.down, out hit, playerHeight * 0.5f + 0.3f, whatIsGround);
+        if (hit.collider)
+        {
+            Debug.Log(hit.collider.gameObject.name);
+        }
+        //grounded = rb.velocity.y == 0.0f;
+        if (dialogueUI.isOpen)
+        {
+            return;
+        }
+
+        // ground check
+        grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.3f, whatIsGround);
+        //Stashed changes
 
         MyInput();
         SpeedControl();
