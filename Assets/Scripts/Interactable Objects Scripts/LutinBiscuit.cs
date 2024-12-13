@@ -24,6 +24,19 @@ public class LutinBiscuit : Lutin
 
     public override void Interact(Player player)
     {
+        base.Interact(player);
+        if (DialogueTriggers.instance)
+        {
+            if (!DialogueTriggers.instance.talkedWithBiscuit)
+            {
+                DialogueTriggers.instance.talkedWithBiscuit = true;
+                MissionIcon missionIcon = FindObjectOfType<MissionIcon>();
+                if (missionIcon != null)
+                {
+                    missionIcon.ShowGreenMissionIcon();
+                }
+            }
+        }
         Debug.Log("Lutin Biscuit");
     }
 }

@@ -13,6 +13,18 @@ public class LutinBonbon : Lutin
 
     public override void Interact(Player player)
     {
+        if (DialogueTriggers.instance)
+        {
+            if (DialogueTriggers.instance.HasFoundMissingPiece && !DialogueTriggers.instance.talkedWithBonbon)
+            {
+                DialogueTriggers.instance.talkedWithBonbon = true;
+                MissionIcon missionIcon = FindObjectOfType<MissionIcon>();
+                if (missionIcon != null)
+                {
+                    missionIcon.ShowGreenMissionIcon();
+                }
+            }
+        }
         Debug.Log("Lutin Bonbon");
     }
 

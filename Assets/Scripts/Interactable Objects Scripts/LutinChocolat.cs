@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class LutinChocolat : Lutin
 {
+    DialogueObject bonbonDialogue;
     public override void Interact()
     {
         Vector3 direction = player.transform.position - transform.position;
@@ -14,6 +15,33 @@ public class LutinChocolat : Lutin
     public override void Interact(Player player)
     {
         Debug.Log("Lutin Chocolat");
+
+        if (DialogueTriggers.instance)
+        {
+            if (DialogueTriggers.instance.HasBonbon && DialogueTriggers.instance.talkedWithChocolatWithBonbon)
+            {
+                DialogueTriggers.instance.talkedWithChocolatWithBonbon = true;
+                DialogueUI dialogueUI = FindObjectOfType<DialogueUI>();
+                if (dialogueUI != null)
+                {
+                    dialogueUI.ShowDialogue(bonbonDialogue);
+                }
+                MissionIcon missionIcon = FindObjectOfType<MissionIcon>();
+                if (missionIcon != null)
+                {
+                    missionIcon.ShowGreenMissionIcon();
+                }
+            }
+            else if (DialogueTriggers.instance.talkedWithBiscuit)
+            {
+                DialogueTriggers.instance.talkedWithChocolat = true;
+                DialogueUI dialogueUI = FindObjectOfType<DialogueUI>();
+                if (dialogueUI != null)
+                {
+                    dialogueUI.ShowDialogue(dialogueObject);
+                }
+            }
+        }
     }
 
     void Start()

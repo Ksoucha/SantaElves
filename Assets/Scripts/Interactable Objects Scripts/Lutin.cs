@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Lutin : MonoBehaviour, IInteractable
 {
+    public DialogueObject dialogueObject;
     public float moveSpeed = 2;
     public Transform waypoint1;
     public Transform waypoint2;
@@ -73,6 +74,11 @@ public class Lutin : MonoBehaviour, IInteractable
 
     public virtual void Interact(Player player)
     {
+        DialogueUI dialogueUI = FindObjectOfType<DialogueUI>();
+        if (dialogueUI != null)
+        {
+            dialogueUI.ShowDialogue(dialogueObject);
+        }
         Debug.Log("Lutin");
     }
 }

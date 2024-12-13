@@ -11,7 +11,18 @@ public class Candy : MonoBehaviour, IInteractable
 
     public void Interact(Player player)
     {
-        throw new System.NotImplementedException();
+        if (DialogueTriggers.instance)
+        {
+            if (!DialogueTriggers.instance.HasBonbon)
+            {
+                DialogueTriggers.instance.HasBonbon = true;
+                MissionIcon missionIcon = FindObjectOfType<MissionIcon>();
+                if (missionIcon != null)
+                {
+                    missionIcon.ShowGreenMissionIcon();
+                }
+            }
+        }
     }
 
     void Start()

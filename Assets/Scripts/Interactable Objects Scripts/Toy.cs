@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Toy : MonoBehaviour, IInteractable
 {
+    public DialogueObject dialogueObject;
     public void Interact()
     {
         throw new System.NotImplementedException();
@@ -11,6 +12,23 @@ public class Toy : MonoBehaviour, IInteractable
 
     public void Interact(Player player)
     {
+        DialogueUI dialogueUI = FindObjectOfType<DialogueUI>();
+        if (dialogueUI != null)
+        {
+            dialogueUI.ShowDialogue(dialogueObject);
+            if (DialogueTriggers.instance)
+            {
+                if (DialogueTriggers.instance.HasScrewdriver && !DialogueTriggers.instance.HasFixedToy)
+                {
+                    DialogueTriggers.instance.HasFixedToy = true;
+                    MissionIcon missionIcon = FindObjectOfType<MissionIcon>();
+                    if (missionIcon != null)
+                    {
+                        missionIcon.ShowGreenMissionIcon();
+                    }
+                }
+            }
+        }
         Debug.Log("TOY");
     }
 
