@@ -16,9 +16,5 @@ public class DialogueEvents : MonoBehaviour
         {
             return;
         }
-
-
     }
-
-
 }
