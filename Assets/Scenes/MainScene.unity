@@ -17254,7 +17254,7 @@ MonoBehaviour:
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
+  m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
@@ -25232,7 +25232,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b569c45c81d78064c8b7dab6eee671d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseSensitivity: 50
+  mouseSensitivity: 100
 --- !u!4 &1177779000
 Transform:
   m_ObjectHideFlags: 0
@@ -37466,7 +37466,7 @@ Transform:
   m_GameObject: {fileID: 1855796501}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 86.94, y: 20.05, z: 13.32}
+  m_LocalPosition: {x: 86.94, y: 22.19, z: 13.32}
   m_LocalScale: {x: 15, y: 15, z: 15}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -37517,7 +37517,7 @@ CapsuleCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.5
   m_Height: 1
@@ -39395,7 +39395,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1025494911}
   m_Direction: 0
   m_MinValue: 0.1
-  m_MaxValue: 300
+  m_MaxValue: 400
   m_WholeNumbers: 0
   m_Value: 200
   m_OnValueChanged:
