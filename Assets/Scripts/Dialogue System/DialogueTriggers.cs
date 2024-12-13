@@ -4,15 +4,10 @@ using UnityEngine;
 
 public class DialogueTriggers : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public bool batteryInHand = false;
+    public bool giftedBattery = false;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
+
+
 }

@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85178d028e954e54483a4a03d3f7139e, type: 3}
+  m_Name: JB 1
+  m_EditorClassIdentifier: 
+  dialogue:
+  - "Wow, \xE7a fait longtemps que je n\u2019ai pas vu un \xEAtre vivant ici\u2026"
+  - "\xC7a fait des ann\xE9es que j\u2019attends d\u2019\xEAtre donn\xE9 \xE0 un
+    enfant, mais je suis abandonn\xE9 ici."
+  - "Je suis trop bris\xE9... Il n'y a rien \xE0 faire avec moi."
