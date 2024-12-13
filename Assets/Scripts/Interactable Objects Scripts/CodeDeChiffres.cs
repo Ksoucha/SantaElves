@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CodeDeChiffres : MonoBehaviour
+public class CodeDeChiffres : MonoBehaviour, IInteractable
 {
     public int[] code;
     public AudioSource succeedSound;
@@ -47,5 +47,10 @@ public class CodeDeChiffres : MonoBehaviour
             currentIndex = 0;
             failSound.Play();
         }
+    }
+
+    public void Interact(Player player)
+    {
+        throw new System.NotImplementedException();
     }
 }

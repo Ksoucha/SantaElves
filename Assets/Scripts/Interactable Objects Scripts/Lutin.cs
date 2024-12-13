@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Lutin : MonoBehaviour
+public class Lutin : MonoBehaviour, IInteractable
 {
     public float moveSpeed = 2;
     public Transform waypoint1;
@@ -10,9 +10,9 @@ public class Lutin : MonoBehaviour
 
     Vector3 originalPosition;
     public Animator animator;
-    private Player player;
+    protected Player player;
 
-    public void Interact()
+    public virtual void Interact()
     {
         Vector3 direction = player.transform.position - transform.position;
         direction.Normalize();
@@ -22,7 +22,7 @@ public class Lutin : MonoBehaviour
     void Start()
     {
         originalPosition = transform.position;
-        StartCoroutine(BiscuitCoroutine());
+        // StartCoroutine(BiscuitCoroutine());
         player = FindAnyObjectByType<Player>();
     }
 
@@ -69,5 +69,10 @@ public class Lutin : MonoBehaviour
             yield return null;
         }
         animator.SetBool("IsWalking", false);
+    }
+
+    public virtual void Interact(Player player)
+    {
+        Debug.Log("Lutin");
     }
 }

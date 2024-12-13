@@ -12,10 +12,22 @@ public class PlayerCam : MonoBehaviour
     float xRotation;
     float yRotation;
 
+    public float interactionDistance = 30f;
+    new Camera camera;
+
+    // private IInteractable interactable;
+    [SerializeField]
+    private Player player;
+
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        camera = GetComponent<Camera>();
+        if (player == null )
+        {
+            player = GetComponent<Player>();
+        }
     }
 
     void Update()
@@ -38,5 +50,32 @@ public class PlayerCam : MonoBehaviour
         // rotate cam and orientation
         transform.rotation = Quaternion.Euler(xRotation, yRotation, 0);
         orientation.rotation = Quaternion.Euler(0, yRotation, 0);
+    }
+
+    private void FixedUpdate()
+    {
+        RaycastHit hitInfo;
+        if (Physics.Raycast(camera.transform.position, camera.transform.forward, out hitInfo, interactionDistance))
+        {
+            Debug.Log(hitInfo.collider.name);
+
+            IInteractable interactableObject = hitInfo.collider.gameObject.GetComponent<IInteractable>();
+            if (interactableObject != null)
+            {
+                if (player.interactable == null)
+                {
+                    player.interactable = interactableObject;
+                }
+                else if (player.interactable != interactableObject)
+                {
+                    player.interactable = interactableObject;
+                }
+            }
+        }
+        else
+        {
+            Debug.DrawLine(camera.transform.position, camera.transform.position + (camera.transform.forward) * interactionDistance, Color.white);
+            Debug.Log("Raycast hit nothing");
+        }
     }
 }

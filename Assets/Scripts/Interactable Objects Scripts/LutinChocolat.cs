@@ -2,21 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LutinChocolat : MonoBehaviour
+public class LutinChocolat : Lutin
 {
-    public Animator animator;
-    private Player player;
-
-    public void Interact()
+    public override void Interact()
     {
         Vector3 direction = player.transform.position - transform.position;
         direction.Normalize();
         transform.forward = direction;
     }
 
+    public override void Interact(Player player)
+    {
+        Debug.Log("Lutin Chocolat");
+    }
+
     void Start()
     {
-        player = FindAnyObjectByType<Player>();
     }
 
     void Update()
