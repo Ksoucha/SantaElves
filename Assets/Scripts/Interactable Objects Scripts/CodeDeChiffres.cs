@@ -6,8 +6,8 @@ using UnityEngine;
 public class CodeDeChiffres : MonoBehaviour
 {
     public int[] code;
-    //public AudioSource succeedSound;
-    //public AudioSource failSound;
+    public AudioSource succeedSound;
+    public AudioSource failSound;
     //public GameObject key;
     
     [SerializeField] private Door door;
@@ -26,6 +26,7 @@ public class CodeDeChiffres : MonoBehaviour
 
     internal void OnPress(int number)
     {
+        Debug.Log(number);
         if (isFinished)
             return;
 
@@ -40,13 +41,19 @@ public class CodeDeChiffres : MonoBehaviour
                     door.Unlock();
                 }
                 //key.SetActive(true);
-                //succeedSound.Play();
+                if (succeedSound != null)
+                {
+                    succeedSound.Play();
+                }
             }
         }
         else
         {
             currentIndex = 0;
-            //failSound.Play();
+            if (failSound != null)
+            {
+                failSound.Play();
+            }
         }
     }
 }

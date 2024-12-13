@@ -57,7 +57,7 @@ public class PlayerCam : MonoBehaviour
         RaycastHit hitInfo;
         if (Physics.Raycast(camera.transform.position, camera.transform.forward, out hitInfo, interactionDistance))
         {
-            Debug.Log(hitInfo.collider.name);
+            // Debug.Log(hitInfo.collider.name);
 
             IInteractable interactableObject = hitInfo.collider.gameObject.GetComponent<IInteractable>();
             if (interactableObject != null)
@@ -75,7 +75,7 @@ public class PlayerCam : MonoBehaviour
         else
         {
             Debug.DrawLine(camera.transform.position, camera.transform.position + (camera.transform.forward) * interactionDistance, Color.white);
-            Debug.Log("Raycast hit nothing");
+            // Debug.Log("Raycast hit nothing");
         }
     }
 }

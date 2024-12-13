@@ -48,14 +48,16 @@ namespace DoorScript
 
         public void Interact(Player player)
         {
+            Debug.Log("Door Interact!");
             if (!isLocked)
             {
-                open = !open;
+                OpenDoor();
             }
         }
 
         public void Unlock()
         {
+            Debug.Log("Door Unlocked!");
             isLocked = false;
         }    
     }
