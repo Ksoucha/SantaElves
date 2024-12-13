@@ -13,14 +13,4 @@ public class SecretDoor : MonoBehaviour, IInteractable
     {
         Debug.Log("Secret Doooor");
     }
-
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }
 }

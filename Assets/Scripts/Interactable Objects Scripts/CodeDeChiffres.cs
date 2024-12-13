@@ -8,7 +8,6 @@ public class CodeDeChiffres : MonoBehaviour
     public int[] code;
     public AudioSource succeedSound;
     public AudioSource failSound;
-    //public GameObject key;
     
     [SerializeField] private Door door;
     int currentIndex;
@@ -16,7 +15,7 @@ public class CodeDeChiffres : MonoBehaviour
 
     void Start()
     {
-        //key.SetActive(false);
+       
     }
 
     void Update()
@@ -40,7 +39,6 @@ public class CodeDeChiffres : MonoBehaviour
                 {
                     door.Unlock();
                 }
-                //key.SetActive(true);
                 if (succeedSound != null)
                 {
                     succeedSound.Play();

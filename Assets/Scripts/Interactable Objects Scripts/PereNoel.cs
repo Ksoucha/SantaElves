@@ -6,6 +6,7 @@ public class PereNoel : MonoBehaviour, IInteractable
 {
     public DialogueObject dialogueObject;
     public DialogueObject fixedToyDialogueObject;
+
     public void Interact()
     {
         throw new System.NotImplementedException();
@@ -32,15 +33,5 @@ public class PereNoel : MonoBehaviour, IInteractable
             }
             */
         }
-    }
-
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
     }
 }

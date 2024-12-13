@@ -26,14 +26,4 @@ public class Candy : MonoBehaviour, IInteractable
         }
         */
     }
-
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }
 }

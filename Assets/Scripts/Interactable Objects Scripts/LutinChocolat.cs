@@ -5,6 +5,7 @@ using UnityEngine;
 public class LutinChocolat : Lutin
 {
     DialogueObject bonbonDialogue;
+
     public override void Interact()
     {
         Vector3 direction = player.transform.position - transform.position;
@@ -42,9 +43,7 @@ public class LutinChocolat : Lutin
                     dialogueUI.ShowDialogue(dialogueObject);
                 }
             }
-        
         }
         */
     }
-
 }

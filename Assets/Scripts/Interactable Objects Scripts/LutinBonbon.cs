@@ -34,9 +34,4 @@ public class LutinBonbon : Lutin
     {
         player = FindAnyObjectByType<Player>();
     }
-
-    void Update()
-    {
-        
-    }
 }
