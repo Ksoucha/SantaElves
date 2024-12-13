@@ -50,10 +50,19 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        if (dialogueUI.isOpen) return;
+        if (dialogueUI)
+        {
+            if (dialogueUI.isOpen) return;
+        }
 
         // ground check
-        grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 3.5f + 3.5f, whatIsGround);
+        //RaycastHit hit;
+        //grounded = Physics.Raycast(transform.position, Vector3.down, out hit, playerHeight * 3.5f + 3.5f, whatIsGround);
+        //if (hit.collider)
+        //{
+        //    Debug.Log(hit.collider.gameObject.name);
+        //}
+        grounded = rb.velocity.y == 0.0f;
 
         MyInput();
         SpeedControl();
@@ -105,10 +114,11 @@ public class Player : MonoBehaviour
 
         if (grounded)
         {
-            if (verticalInput > 0 || horizontalInput > 0)
+            Debug.Log("Grounded");
+            if (verticalInput != 0 || horizontalInput != 0)
             {
+                Debug.Log("Move");
                 rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
-
                 
                 footstepTimer -= Time.deltaTime;
                 if (footstepTimer <= 0f)
@@ -116,7 +126,6 @@ public class Player : MonoBehaviour
                     footstepSound.Play();
                     footstepTimer = cooldownFootsteps;
                 }
-                
             }
         }
         else if (!grounded)
@@ -143,6 +152,7 @@ public class Player : MonoBehaviour
         rb.velocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
 
         rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
+        Debug.Log("Jump");
     }
 
     private void ResetJump()

@@ -22,8 +22,8 @@ public class PlayerCam : MonoBehaviour
     {
         if (PlayerSettings.instance != null)
         {
-            // sensX = PlayerSettings.instance.mouseSensitivity;
-            //sensY = PlayerSettings.instance.mouseSensitivity;
+            sensX = PlayerSettings.instance.mouseSensitivity;
+            sensY = PlayerSettings.instance.mouseSensitivity;
         }
 
         // get mouse input
