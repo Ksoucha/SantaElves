@@ -13,7 +13,7 @@ public class SubtitlesManager : MonoBehaviour
     public TMP_Text gameControlsText;
 
     private float subtitleTimer;
-    private float gameControlsTextTimer = 15f;
+    private float gameControlsTextTimer = 45f;
 
     internal void ShowSubtitleText(string text, float duration)
     {

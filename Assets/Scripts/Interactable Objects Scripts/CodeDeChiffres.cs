@@ -7,21 +7,11 @@ public class CodeDeChiffres : MonoBehaviour
 {
     public int[] code;
     public AudioSource succeedSound;
-    public AudioSource failSound;
+    public MissionIcon missionIcon;
     
     [SerializeField] private Door door;
     int currentIndex = 0;
     private bool isFinished = false;
-
-    void Start()
-    {
-       
-    }
-
-    void Update()
-    {
-        
-    }
 
     internal void OnPress(int number)
     {
@@ -38,6 +28,7 @@ public class CodeDeChiffres : MonoBehaviour
                 if (door != null)
                 {
                     door.Unlock();
+                    missionIcon.ShowRedMissionIcon();
                 }
                 if (succeedSound != null)
                 {
@@ -49,10 +40,6 @@ public class CodeDeChiffres : MonoBehaviour
         {
             currentIndex = 0;
             Debug.Log("Failed");
-            if (failSound != null)
-            {
-                failSound.Play();
-            }
         }
     }
 }

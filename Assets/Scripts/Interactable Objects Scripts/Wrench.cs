@@ -4,17 +4,14 @@ using UnityEngine;
 
 public class Wrench : MonoBehaviour, IInteractable
 {
-    //public GameObject wrench;
-
-    public void Interact()
-    {
-        throw new System.NotImplementedException();
-    }
+    public GameObject wrench;
 
     public void Interact(Player player)
     {
-        //wrench.SetActive(true);
+        Debug.Log("Wrench");
+        player.wrench.SetActive(true);
         DialogueTriggers.wrenchInHand = true;
+        Destroy(wrench);
         /*
         if (DialogueTriggers.instance)
         {
@@ -27,9 +24,12 @@ public class Wrench : MonoBehaviour, IInteractable
                     missionIcon.ShowGreenMissionIcon();
                 }
             }
+        }*/
+
+        MissionIcon missionIcon = FindObjectOfType<MissionIcon>();
+        if (missionIcon != null)
+        {
+            missionIcon.ShowGreenMissionIcon();
         }
-        */
-        player.Wrench.SetActive(true);
-        Debug.Log("Screwdriver");
     }
 }

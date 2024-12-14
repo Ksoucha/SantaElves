@@ -20,17 +20,6 @@ public class ObjectIcon : MonoBehaviour
     public Dictionary<ItemType, Image> itemsImage;
     public AudioSource itemPop;
 
-
-    void Start()
-    {
-
-    }
-
-    void Update()
-    {
-        
-    }
-
     public void ShowItemIcon(ItemType itemType)
     {
         itemsImage[itemType].gameObject.SetActive(true);

@@ -12,14 +12,4 @@ public class PlayerSettings : MonoBehaviour
         instance = this;
         DontDestroyOnLoad(gameObject);
     }
-
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }
 }

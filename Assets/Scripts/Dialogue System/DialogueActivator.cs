@@ -15,7 +15,7 @@ public class DialogueActivator : MonoBehaviour, IInteractable
     [SerializeField] private DialogueObject ninthDialogueObject;
     [SerializeField] private DialogueObject tenthDialogueObject;
 
-    
+    public MissionIcon missionIcon;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -45,6 +45,8 @@ public class DialogueActivator : MonoBehaviour, IInteractable
         else if (DialogueTriggers.wrenchInHand == true)
         {
             player.DialogueUI.ShowDialogue(ninthDialogueObject);
+            player.wrench.SetActive(false);
+            missionIcon.ShowRedMissionIcon();
         }
         else if (DialogueTriggers.secretDoorOpen == true)
         {
@@ -53,34 +55,38 @@ public class DialogueActivator : MonoBehaviour, IInteractable
         else if (DialogueTriggers.giftedCandy == true)
         {
             player.DialogueUI.ShowDialogue(seventhDialogueObject);
+            missionIcon.ShowRedMissionIcon();
         }
         else if (DialogueTriggers.candyInHand == true)
         {
             player.DialogueUI.ShowDialogue(sixthDialogueObject);
+            player.candy.SetActive(false);
             DialogueTriggers.giftedCandy = true;
+            missionIcon.ShowRedMissionIcon();
         }
         else if (DialogueTriggers.giftedBall == true)
         {
             player.DialogueUI.ShowDialogue(fifthDialogueObject);
+            missionIcon.ShowRedMissionIcon();
         }
         else if (DialogueTriggers.ballInHand == true)
         {
-            //DialogueTriggers.giftedBattery = false;
             player.DialogueUI.ShowDialogue(fourthDialogueObject);
             player.ball.SetActive(false);
             DialogueTriggers.giftedBall = true;
+            missionIcon.ShowRedMissionIcon();
         }
         else if (DialogueTriggers.giftedBattery == true)
         {
             player.DialogueUI.ShowDialogue(thirdDialogueObject);
-            DialogueTriggers.giftedBattery = false;
+            missionIcon.ShowRedMissionIcon();
         }
         else if (DialogueTriggers.batteryInHand == true)
         {
             player.DialogueUI.ShowDialogue(secondDialogueObject);
             player.battery.SetActive(false);
-            DialogueTriggers.batteryInHand = false;
             DialogueTriggers.giftedBattery = true;
+            missionIcon.ShowRedMissionIcon();
         }
         else
         {

@@ -4,17 +4,14 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour, IInteractable
 {
-    public GameObject ball;
-
-    public void Interact()
-    {
-        throw new System.NotImplementedException();
-    }
+    public GameObject bouleDeNoel;
 
     public void Interact(Player player)
     {
-        ball.SetActive(true);
+        Debug.Log("Ball");
+        player.ball.SetActive(true);
         DialogueTriggers.ballInHand = true;
+        Destroy(bouleDeNoel);
         /*
         if (DialogueTriggers.instance)
         {
@@ -27,7 +24,12 @@ public class Ball : MonoBehaviour, IInteractable
                     missionIcon.ShowGreenMissionIcon();
                 }
             }
+        }*/
+
+        MissionIcon missionIcon = FindObjectOfType<MissionIcon>();
+        if (missionIcon != null)
+        {
+            missionIcon.ShowGreenMissionIcon();
         }
-        */
     }
 }

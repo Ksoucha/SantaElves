@@ -13,16 +13,6 @@ public class MenuOptions : MonoBehaviour
     public GameObject optionsMenu;
     public GameObject pauseMenu;
 
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }
-
     public void OnMasterVolumeChanged()
     {
         masterVolumeGroup.audioMixer.SetFloat("Volume", volumeSlider.value);

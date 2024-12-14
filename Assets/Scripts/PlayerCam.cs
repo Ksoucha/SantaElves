@@ -67,7 +67,6 @@ public class PlayerCam : MonoBehaviour
                 else if (player.interactable != interactableObject)
                 {
                     player.interactable = interactableObject;
-                
                 }
             }
             else if (interactableObject == null && player.interactable != null)
@@ -78,7 +77,6 @@ public class PlayerCam : MonoBehaviour
         else
         {
             Debug.DrawLine(camera.transform.position, camera.transform.position + (camera.transform.forward) * interactionDistance, Color.white);
-            // Debug.Log("Raycast hit nothing");
         }
     }
 }

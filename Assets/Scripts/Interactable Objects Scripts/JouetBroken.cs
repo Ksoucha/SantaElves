@@ -6,18 +6,12 @@ public class JouetBroken : MonoBehaviour, IInteractable
 {
     public DialogueObject dialogueObject;
 
-    public void Interact()
-    {
-        throw new System.NotImplementedException();
-    }
-
     public void Interact(Player player)
     {
-        DialogueUI dialogueUI = FindObjectOfType<DialogueUI>();
+        /*DialogueUI dialogueUI = FindObjectOfType<DialogueUI>();
         if (dialogueUI != null)
         {
             dialogueUI.ShowDialogue(dialogueObject);
-            /*
             if (DialogueTriggers.instance)
             {
                 if (!DialogueTriggers.instance.HasFoundMissingPiece)
@@ -30,7 +24,6 @@ public class JouetBroken : MonoBehaviour, IInteractable
                     }
                 }
             }
-            */
-        }
+        }*/
     }
 }

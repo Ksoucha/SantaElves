@@ -6,6 +6,11 @@ public class LutinChocolat : Lutin
 {
     DialogueObject bonbonDialogue;
 
+    void Start()
+    {
+        player = FindAnyObjectByType<Player>();
+    }
+
     public override void Interact()
     {
         Vector3 direction = player.transform.position - transform.position;

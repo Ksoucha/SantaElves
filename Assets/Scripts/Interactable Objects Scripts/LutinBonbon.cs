@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class LutinBonbon : Lutin
 {
+    void Start()
+    {
+        player = FindAnyObjectByType<Player>();
+    }
+
     public override void Interact()
     {
         Vector3 direction = player.transform.position - transform.position;
@@ -13,6 +18,7 @@ public class LutinBonbon : Lutin
 
     public override void Interact(Player player)
     {
+        Debug.Log("Lutin Bonbon");
         /*
         if (DialogueTriggers.instance)
         {
@@ -27,11 +33,5 @@ public class LutinBonbon : Lutin
             }
         }
         */
-        Debug.Log("Lutin Bonbon");
-    }
-
-    void Start()
-    {
-        player = FindAnyObjectByType<Player>();
     }
 }

@@ -2,76 +2,31 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SecretDoor : MonoBehaviour
+public class SecretDoor : MonoBehaviour, IInteractable
 {
+    public GameObject openedSecretDoor;
+    public GameObject closedSecretDoor;
+    public AudioSource secretDoorSound;
 
-    public Collider clickObject;
-    public Animation anim;
-
-    private Ray _ray;
-    private RaycastHit _hit;
-    private bool _opened;
-
-    private void Update()
+    public void Interact(Player player)
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        Debug.Log("Secret Door");
+
+        if (DialogueTriggers.giftedCandy == true)
         {
-            Click();
-        }
-    }
+            secretDoorSound.Play();
+            openedSecretDoor.SetActive(true);
+            closedSecretDoor.SetActive(false);
+            DialogueTriggers.secretDoorOpen = true;
 
-    private void Click()
-    {
-        if (!clickObject) return;
-        if (!anim) return;
-
-        _ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-        if (Physics.Raycast(_ray, out _hit))
-        {
-            if (_hit.collider == clickObject)
+            MissionIcon missionIcon = FindObjectOfType<MissionIcon>();
+            if (missionIcon != null)
             {
-                if (_opened)
-                {
-                    anim.Play("doorClose");
-                    _opened = false;
-                }
-                else
-                {
-                    anim.Play("doorOpen");
-                    _opened = true;
-                }
-
+                missionIcon.ShowGreenMissionIcon();
             }
         }
     }
 }
-    /*[SerializeField] private KeyCode openDoorKey = KeyCode.Mouse0;
-    private Animator doorAnim;
-    [SerializeField] private Animation doorOpen;
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Player") && other.TryGetComponent(out Player player))
-        {
-            if (Input.GetKeyDown(openDoorKey))
-            {
-                doorAnim.Play("DoorOpen", 0, 0);
-            }
-        }
-    }
 
-    /*public void Interact(Player player)
-    {
-
-        Debug.Log("Secret Door");
-
-        //if (DialogueTriggers.giftedCandy == true)
-        //{
-
-            doorAnim.Play("DoorOpen", 0, 0.0f);
-
-        //}
-
-    }*/
 

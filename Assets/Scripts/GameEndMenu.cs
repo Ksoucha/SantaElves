@@ -5,16 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class GameEndMenu : MonoBehaviour
 {
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }
-
     public void OnButtonReplay()
     {
         SceneManager.LoadScene("GameMainMenu");

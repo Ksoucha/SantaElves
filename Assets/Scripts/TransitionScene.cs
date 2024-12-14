@@ -8,11 +8,6 @@ public class TransitionScene : MonoBehaviour
     [SerializeField] Animator fadeToBlackAnimator;
     private bool isFadeAnimationOver = false;
 
-    void Start()
-    {
-        
-    }
-
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Return))

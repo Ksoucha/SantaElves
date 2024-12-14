@@ -6,11 +6,11 @@ public class Lutin : MonoBehaviour, IInteractable
 {
     public DialogueObject dialogueObject;
     public float moveSpeed = 2;
-    public Transform waypoint1;
-    public Transform waypoint2;
+    //public Transform waypoint1;
+    //public Transform waypoint2;
 
     Vector3 originalPosition;
-    public Animator animator;
+    //public Animator animator;
     protected Player player;
 
     public virtual void Interact()
@@ -22,12 +22,12 @@ public class Lutin : MonoBehaviour, IInteractable
 
     void Start()
     {
-        originalPosition = transform.position;
+        //originalPosition = transform.position;
         //StartCoroutine(BiscuitCoroutine());
         player = FindAnyObjectByType<Player>();
     }
 
-    IEnumerator BiscuitCoroutine()
+    /*IEnumerator BiscuitCoroutine()
     {
         yield return new WaitForSeconds(2);
 
@@ -65,7 +65,7 @@ public class Lutin : MonoBehaviour, IInteractable
             yield return null;
         }
         animator.SetBool("IsWalking", false);
-    }
+    }*/
 
     public virtual void Interact(Player player)
     {

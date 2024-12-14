@@ -4,19 +4,15 @@ using UnityEngine;
 
 public class Battery : MonoBehaviour, IInteractable
 {
-    public DialogueObject dialogueObject;
-    public GameObject battery;
-
-    public void Interact()
-    {
-        throw new System.NotImplementedException();
-    }
+    //public DialogueObject dialogueObject;
 
     public void Interact(Player player)
     {
-        battery.SetActive(true);
+        Debug.Log("Battery");
+        player.battery.SetActive(true);
         DialogueTriggers.batteryInHand = true;
-        DialogueUI dialogueUI = FindObjectOfType<DialogueUI>();
+
+        /*DialogueUI dialogueUI = FindObjectOfType<DialogueUI>();
         if (dialogueUI != null)
         {
             //dialogueUI.ShowDialogue(dialogueObject);
@@ -24,9 +20,6 @@ public class Battery : MonoBehaviour, IInteractable
             {
                 if (!DialogueTriggers.batteryInHand)
                 {
-                    //DialogueTriggers.batteryInHand = true;
-                    //battery.SetActive(true);
-                    //DialogueTriggers.instance.HasFoundMissingPiece = true;
                     MissionIcon missionIcon = FindObjectOfType<MissionIcon>();
                     if (missionIcon != null)
                     {
@@ -34,6 +27,12 @@ public class Battery : MonoBehaviour, IInteractable
                     }
                 }
             }
+        }*/
+
+        MissionIcon missionIcon = FindObjectOfType<MissionIcon>();
+        if (missionIcon != null)
+        {
+            missionIcon.ShowGreenMissionIcon();
         }
     }
 }

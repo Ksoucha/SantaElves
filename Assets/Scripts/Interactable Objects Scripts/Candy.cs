@@ -4,16 +4,10 @@ using UnityEngine;
 
 public class Candy : MonoBehaviour, IInteractable
 {
-    //public GameObject candy;
-
-    public void Interact()
-    {
-        throw new System.NotImplementedException();
-    }
-
     public void Interact(Player player)
     {
-        //candy.SetActive(true);
+        Debug.Log("Candy");
+        player.candy.SetActive(true);
         DialogueTriggers.candyInHand = true;
         /*
         if (DialogueTriggers.instance)
@@ -27,7 +21,12 @@ public class Candy : MonoBehaviour, IInteractable
                     missionIcon.ShowGreenMissionIcon();
                 }
             }
+        }*/
+
+        MissionIcon missionIcon = FindObjectOfType<MissionIcon>();
+        if (missionIcon != null)
+        {
+            missionIcon.ShowGreenMissionIcon();
         }
-        */
     }
 }

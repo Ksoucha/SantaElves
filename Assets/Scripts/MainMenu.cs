@@ -7,16 +7,6 @@ public class MainMenu : MonoBehaviour
 {
     public GameObject optionsMenu;
 
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }
-
     public void OnButtonStart()
     {
         SceneManager.LoadScene("Transition");

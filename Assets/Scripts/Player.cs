@@ -6,7 +6,6 @@ public class Player : MonoBehaviour
 {
     [Header("Movement")]
     public float moveSpeed;
-
     public float groundDrag;
 
     public float jumpForce;
@@ -31,24 +30,27 @@ public class Player : MonoBehaviour
 
     Rigidbody rb;
 
+    //Footsteps
     public AudioSource footstepSound;
     private float footstepTimer = 0f;
     private float cooldownFootsteps = 0.8f;
-
-    [SerializeField] private DialogueUI dialogueUI;
 
     // UI
     public DialogueUI DialogueUI => dialogueUI;
     public GameObject GameControlUI;
     [SerializeField]
     private float TimeBeforeDisablingGameControlUI = 15f;
+    [SerializeField] private DialogueUI dialogueUI;
 
     // Objects to interact
     public IInteractable interactable { get; set; }
+
     // Objects that player can hold
     public GameObject battery;
     public GameObject ball;
-    public GameObject Wrench;
+    public GameObject wrench;
+    public GameObject candy;
+    public GameObject brokenToy;
 
     private void Start()
     {
@@ -75,14 +77,11 @@ public class Player : MonoBehaviour
             Debug.Log(hit.collider.gameObject.name);
         }
         //grounded = rb.velocity.y == 0.0f;
+
         if (dialogueUI.isOpen)
         {
             return;
         }
-
-        // ground check
-        //grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.3f, whatIsGround);
-        //Stashed changes
 
         MyInput();
         SpeedControl();
@@ -143,6 +142,7 @@ public class Player : MonoBehaviour
                 footstepTimer -= Time.deltaTime;
                 if (footstepTimer <= 0f)
                 {
+                    Debug.Log("footsteps");
                     footstepSound.Play();
                     footstepTimer = cooldownFootsteps;
                 }
