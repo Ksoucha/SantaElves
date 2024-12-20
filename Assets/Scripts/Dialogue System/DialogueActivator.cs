@@ -16,6 +16,7 @@ public class DialogueActivator : MonoBehaviour, IInteractable
     [SerializeField] private DialogueObject tenthDialogueObject;
 
     public MissionIcon missionIcon;
+    public BoxCollider toyBoxCollider;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -40,17 +41,20 @@ public class DialogueActivator : MonoBehaviour, IInteractable
     {
         if (DialogueTriggers.brokenToyInHand == true)
         {
-            player.DialogueUI.ShowDialogue(tenthDialogueObject);
+            player.DialogueUI.ShowDialogue(tenthDialogueObject, player.DialogueUI.ActivateEndText);
+            player.brokenToy.SetActive(false);
         }
         else if (DialogueTriggers.wrenchInHand == true)
         {
             player.DialogueUI.ShowDialogue(ninthDialogueObject);
             player.wrench.SetActive(false);
             missionIcon.ShowRedMissionIcon();
+            toyBoxCollider.enabled = true;
         }
         else if (DialogueTriggers.secretDoorOpen == true)
         {
             player.DialogueUI.ShowDialogue(eightDialogueObject);
+            missionIcon.ShowRedMissionIcon();
         }
         else if (DialogueTriggers.giftedCandy == true)
         {

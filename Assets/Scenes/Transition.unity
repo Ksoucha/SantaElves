@@ -629,7 +629,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: fa32b1c48e751654fa5f2873a46f6000, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -1012,9 +1012,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "C\u2019est le dernier jour avant No\xEBl. Notre lutin est en retard pour
     le dernier cadeau \xE0 faire. Il est nerveux \xE0 cause du retard et veut plaire
-    au P\xE8re No\xEBl en faisant un jouet extra sp\xE9cial. Il lui manque une pi\xE8ce
-    pour sa cr\xE9ation. Serais-tu capable de trouver cette pi\xE8ce et finaliser
-    le jouet?"
+    au P\xE8re No\xEBl en faisant un jouet extra sp\xE9cial. Serais-tu capable de
+    l'aider \xE0 trouver le cadeau id\xE9al?"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

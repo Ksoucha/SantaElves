@@ -5,9 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class GameEndMenu : MonoBehaviour
 {
-    public void OnButtonReplay()
+    private void Awake()
     {
-        SceneManager.LoadScene("GameMainMenu");
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = true;
     }
 
     public void OnButtonExit()

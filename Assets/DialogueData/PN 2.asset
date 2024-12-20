@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
   - "Bravo mon lutin, je savais que tu trouverais la r\xE9ponse."
-  - Tu peux maintenant aller nourrir le petit gourmant de Lutin Chocolat.
+  - "Tu peux maintenant aller nourrir le petit gourmant de Lutin Chocolat. Prend
+    l'un des petits bonbons en bas de l'\xE9tag\xE8re. "

@@ -22,12 +22,9 @@ public class Player : MonoBehaviour
     bool grounded;
 
     public Transform orientation;
-
     private float horizontalInput;
     private float verticalInput;
-
     Vector3 moveDirection;
-
     Rigidbody rb;
 
     //Footsteps
@@ -76,7 +73,6 @@ public class Player : MonoBehaviour
         {
             Debug.Log(hit.collider.gameObject.name);
         }
-        //grounded = rb.velocity.y == 0.0f;
 
         if (dialogueUI.isOpen)
         {

@@ -9,19 +9,6 @@ public class Candy : MonoBehaviour, IInteractable
         Debug.Log("Candy");
         player.candy.SetActive(true);
         DialogueTriggers.candyInHand = true;
-        /*
-        if (DialogueTriggers.instance)
-        {
-            if (!DialogueTriggers.instance.HasBonbon)
-            {
-                DialogueTriggers.instance.HasBonbon = true;
-                MissionIcon missionIcon = FindObjectOfType<MissionIcon>();
-                if (missionIcon != null)
-                {
-                    missionIcon.ShowGreenMissionIcon();
-                }
-            }
-        }*/
 
         MissionIcon missionIcon = FindObjectOfType<MissionIcon>();
         if (missionIcon != null)

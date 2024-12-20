@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: LC 4
   m_EditorClassIdentifier: 
   dialogue:
-  - "C\u2019est \xE7a qu\u2019il y avait dans la pi\xE8ce cach\xE9e?"
+  - "Il y avait un jouet vivant dans la pi\xE8ce cach\xE9e?"
   - "Ouin\u2026 pas trop int\xE9ressant."
   - "As-tu des bonbons \xE0 la place?"

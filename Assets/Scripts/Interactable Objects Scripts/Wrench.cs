@@ -12,19 +12,6 @@ public class Wrench : MonoBehaviour, IInteractable
         player.wrench.SetActive(true);
         DialogueTriggers.wrenchInHand = true;
         Destroy(wrench);
-        /*
-        if (DialogueTriggers.instance)
-        {
-            if (DialogueTriggers.instance.HasFoundMissingPiece && !DialogueTriggers.instance.HasScrewdriver)
-            {
-                DialogueTriggers.instance.HasScrewdriver = true;
-                MissionIcon missionIcon = FindObjectOfType<MissionIcon>();
-                if (missionIcon != null)
-                {
-                    missionIcon.ShowGreenMissionIcon();
-                }
-            }
-        }*/
 
         MissionIcon missionIcon = FindObjectOfType<MissionIcon>();
         if (missionIcon != null)

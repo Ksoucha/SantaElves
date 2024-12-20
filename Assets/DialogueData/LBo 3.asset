@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: LBo 3
   m_EditorClassIdentifier: 
   dialogue:
-  - "C\u2019est lui l\u2019ancien jouet?"
+  - "Tu as trouv\xE9 l\u2019ancien jouet?"
   - "Je suis certain qu\u2019il est r\xE9parable!"

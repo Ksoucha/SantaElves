@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
+using System;
 
 public class DialogueUI : MonoBehaviour
 {
@@ -18,26 +20,20 @@ public class DialogueUI : MonoBehaviour
     {
         typewriterEffect = GetComponent<TypewriterEffect>();
         ShowDialogue(startDialogue);
-
-        //CloseDialogueBox();
     }
 
     private void Update()
     {
-        if (DialogueTriggers.giftedToy == true)
-        {
-            ShowDialogue(endDialogue);
-        }
     }
 
-    public void ShowDialogue(DialogueObject dialogueObject)
+    public void ShowDialogue(DialogueObject dialogueObject, Action functionToExecuteUponFinish = null)
     {
         isOpen = true;
         dialogueBox.SetActive(true);
-        StartCoroutine(StepThroughDialogue(dialogueObject));
+        StartCoroutine(StepThroughDialogue(dialogueObject, functionToExecuteUponFinish));
     }
 
-    private IEnumerator StepThroughDialogue (DialogueObject dialogueObject)
+    private IEnumerator StepThroughDialogue(DialogueObject dialogueObject, Action functionToExecuteUponFinish = null)
     {
         for (int i = 0; i < dialogueObject.Dialogue.Length; i++)
         {
@@ -50,6 +46,8 @@ public class DialogueUI : MonoBehaviour
         {
             CloseDialogueBox();
         }
+
+        functionToExecuteUponFinish?.Invoke();
     }
 
     private void CloseDialogueBox()
@@ -57,5 +55,15 @@ public class DialogueUI : MonoBehaviour
         isOpen = false;
         dialogueBox.SetActive(false);
         textLabel.text = string.Empty;
+    }
+
+    public void LoadEndMenu()
+    {
+        SceneManager.LoadScene("GameEndMenu");
+    }
+
+    public void ActivateEndText()
+    {
+        ShowDialogue(endDialogue, LoadEndMenu);
     }
 }
