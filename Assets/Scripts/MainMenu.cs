@@ -19,13 +19,16 @@ public class MainMenu : MonoBehaviour
 
     public void OnButtonExit()
     {
+#if UNITY_EDITOR
+
         if (Application.isEditor)
         {
             UnityEditor.EditorApplication.isPlaying = false;
         }
-        else
-        {
-            Application.Quit();
-        }
+#else
+        Application.Quit();
+
+#endif
+        
     }
 }

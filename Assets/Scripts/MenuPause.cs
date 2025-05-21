@@ -23,6 +23,7 @@ public class MenuPause : MonoBehaviour
                 pauseMenu.SetActive(true);
                 Time.timeScale = 0;
                 Cursor.lockState = CursorLockMode.Confined;
+                Cursor.visible = true;
             }
         }
     }
@@ -33,18 +34,21 @@ public class MenuPause : MonoBehaviour
         pauseMenu.SetActive(false);
         Time.timeScale = 1;
         Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     public void OnQuitClicked()
     {
+#if UNITY_EDITOR
+
         if (Application.isEditor)
         {
             UnityEditor.EditorApplication.isPlaying = false;
         }
-        else
-        {
-            Application.Quit();
-        }
+#else
+        Application.Quit();
+#endif
+
     }
 
     public void OnOptionsClicked()
