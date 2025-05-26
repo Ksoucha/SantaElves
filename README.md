@@ -5,38 +5,38 @@ Dive into Christmas by enjoying this cozy narrative game, where you are an elf a
 The game was made in first-person mode, in Unity 3D, in collaboration with [noemiealexia](https://github.com/noemiealexia). The character can move around the toy factory, which consists of 5 rooms, and can interact with other characters and objects by pressing **E**. Some dialogues will be repeated until you complete a certain action, so you must make sure to talk with everyone again after doing an action (taking an object, completing a task, discovering a secret room). For the small puzzle in the game, there will be numbers and stones scattered across the rooms. You will have to use them to figure out the code for the numpads.
 
 ## Game Controls
-Press E to talk, to interact with objects or to skip the dialogue  
+Press E to interact with NPCs and objects or to skip the dialogue  
 Press ESC (Escape) to pause the game
 
 ## Features
 * Dialogue system based on dependencies (new dialogues for each character after you complete certain actions)
-* Numpad (used to open doors)
-* Light effects and colorful objects to give Christmas vibes
+* Puzzle involving scattered clues to solve two numpad codes (to open a safe and a door)
+* Ability to change the music volume and mouse sensitivity (in the main menu and the pause UI)
 * Ability to pick up objects
 
 ## Credits for the assets
-https://assetstore.unity.com/packages/3d/props/free-christmas-assets-low-poly-13102
-https://assetstore.unity.com/packages/3d/props/interior/christmas-gifts-52190
-https://assetstore.unity.com/packages/3d/props/interior/christmas-toys-106607
-https://assetstore.unity.com/packages/3d/props/interior/office-pack-free-258600
-https://assetstore.unity.com/packages/3d/props/food/allsorts-candy-12512
-https://assetstore.unity.com/packages/3d/props/industrial/low-poly-factory-machine-pack-demo-272637
-https://assetstore.unity.com/packages/3d/props/industrial/industrial-models-171071
-https://assetstore.unity.com/packages/3d/props/3d-cartoon-cute-safe-pack-297716
-https://assetstore.unity.com/packages/3d/props/tools/double-open-end-wrench-170088
-https://assetstore.unity.com/packages/3d/props/electronics/keypad-free-262151
-https://www.patreon.com/posts/32030551
-https://www.patreon.com/posts/94014721
-https://assetstore.unity.com/packages/3d/props/retro-psx-horror-puzzle-item-pack-icon-lowpoly-250188
-https://sketchfab.com/3d-models/lamps-5287304dab85446eaa8c05c14907be49
+[Various Christmas assets](https://assetstore.unity.com/packages/3d/props/free-christmas-assets-low-poly-13102)  
+[Christmas gifts](https://assetstore.unity.com/packages/3d/props/interior/christmas-gifts-52190)  
+[Christmas toys](https://assetstore.unity.com/packages/3d/props/interior/christmas-toys-106607)  
+[Office pack](https://assetstore.unity.com/packages/3d/props/interior/office-pack-free-258600)  
+[Candy](https://assetstore.unity.com/packages/3d/props/food/allsorts-candy-12512)  
+[Factory machine](https://assetstore.unity.com/packages/3d/props/industrial/low-poly-factory-machine-pack-demo-272637)  
+[Industrial models](https://assetstore.unity.com/packages/3d/props/industrial/industrial-models-171071)  
+[Safe pack](https://assetstore.unity.com/packages/3d/props/3d-cartoon-cute-safe-pack-297716)  
+[Wrench](https://assetstore.unity.com/packages/3d/props/tools/double-open-end-wrench-170088)  
+[Numpad](https://assetstore.unity.com/packages/3d/props/electronics/keypad-free-262151)  
+[Puzzle item pack](https://assetstore.unity.com/packages/3d/props/retro-psx-horror-puzzle-item-pack-icon-lowpoly-250188)  
+[Christmas lights](https://www.patreon.com/posts/32030551)  
+[Procedural Christmas fairy lights](https://www.patreon.com/posts/94014721)  
+[Lamps](https://sketchfab.com/3d-models/lamps-5287304dab85446eaa8c05c14907be49)
 
-## Sounds taken from Pixabay
-https://pixabay.com/sound-effects/search/footsteps/
-https://pixabay.com/sound-effects/search/door/
-https://pixabay.com/music/search/christmas%20background%20music/
-https://pixabay.com/sound-effects/search/magic%20sound/
-https://pixabay.com/sound-effects/search/positive%20pop/
-https://pixabay.com/sound-effects/search/xylophone/
+## Credits for the sounds
+[Footstep sound](https://pixabay.com/sound-effects/search/footsteps/)  
+[Door open sound](https://pixabay.com/sound-effects/search/door/)  
+[Background music](https://pixabay.com/music/search/christmas%20background%20music/)  
+[Magic sound](https://pixabay.com/sound-effects/search/magic%20sound/)  
+[Positive pop sound](https://pixabay.com/sound-effects/search/positive%20pop/)  
+[Xylophone sound](https://pixabay.com/sound-effects/search/xylophone/)
 
 ## Bugs to fix
 * If we interact with the wrong person while holding an object in our hands, the object will disappear. However, if we complete some actions in the wrong order (for instance, if we take the Christmas ball before talking to Santa), the object that we are holding will never disappear.  
