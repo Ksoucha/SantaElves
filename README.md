@@ -2,7 +2,7 @@
 Dive into Christmas by enjoying this cozy narrative game, where you are an elf and you must finish making the last toy that will go into Santa's present bag and will be delivered to children. But before you can complete your toy, you must run a few errands given to you by Santa and the other elves. 
 
 ## Game Overview
-The game was made in first-person mode, in Unity 3D, in collaboration with [noemiealexia](https://github.com/noemiealexia). The character can move around the toy factory, which consists of 5 rooms, and can interact with other characters and objects by pressing **E**. Some dialogues will be repeated until you complete a certain action, so you must make sure to talk with everyone again after doing an action (taking an object, completing a task, discovering a secret room). For the small puzzle in the game, there will be numbers and stones scattered across the rooms. You will have to use them to figure out the code for the numpads.
+The game was made in first-person mode, in Unity 3D, in collaboration with [noemiealexia](https://github.com/noemiealexia). The character can move around the toy factory, which consists of 5 rooms, and can interact with other characters and objects by pressing **E**. Some dialogues will be repeated until you complete a certain action, so you must make sure to talk with everyone again after doing an action (taking an object, completing a task). There are 2 small puzzles in the game for the player to complete in order to unlock doors.
 
 ## Game Controls
 Press E to interact with NPCs and objects or to skip the dialogue  
