@@ -5,8 +5,8 @@ Dive into Christmas by enjoying this cozy narrative game, where you are an elf a
 The game was made in first-person mode, in Unity 3D, in collaboration with [noemiealexia](https://github.com/noemiealexia). The character can move around the toy factory, which consists of 5 rooms, and can interact with other characters and objects by pressing **E**. Some dialogues will be repeated until you complete a certain action, so you must make sure to talk with everyone again after doing an action (taking an object, completing a task). There are 2 small puzzles in the game for the player to complete in order to unlock doors.
 
 ## Game Controls
-Press E to interact with NPCs and objects or to skip the dialogue  
-Press ESC (Escape) to pause the game
+Press **E** to interact with NPCs/objects or to skip the dialogue  
+Press **ESC** to pause the game
 
 ## Features
 * Dialogue system based on dependencies (new dialogues for each character after you complete certain actions)
@@ -40,7 +40,7 @@ Press ESC (Escape) to pause the game
 
 ## Bugs to fix
 * If we interact with the wrong person while holding an object in our hands, the object will disappear. However, if we complete some actions in the wrong order (for instance, if we take the Christmas ball before talking to Santa), the object that we are holding will never disappear.  
-* Sometimes, we cannot interact with a character by pressing E, because we need to be facing the character in a specific direction for it to work.  
+* Sometimes, we cannot interact with a character by pressing **E**, because we need to be facing the character in a specific direction for it to work.  
 * Game ending timing: after taking the broken toy, we must immediately go talk to Santa to trigger the game ending at the right moment.
 
 ## Future features to add
