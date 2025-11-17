@@ -28,7 +28,8 @@ Press **ESC** to pause the game
 [Puzzle item pack](https://assetstore.unity.com/packages/3d/props/retro-psx-horror-puzzle-item-pack-icon-lowpoly-250188)  
 [Christmas lights](https://www.patreon.com/posts/32030551)  
 [Procedural Christmas fairy lights](https://www.patreon.com/posts/94014721)  
-[Lamps](https://sketchfab.com/3d-models/lamps-5287304dab85446eaa8c05c14907be49)
+[Lamps](https://sketchfab.com/3d-models/lamps-5287304dab85446eaa8c05c14907be49)  
+**:star: Special mention to Perceval (Discord ID: perceval4933) who made all the 3D characters**
 
 ## Credits for the sounds
 [Footstep sound](https://pixabay.com/sound-effects/search/footsteps/)  
